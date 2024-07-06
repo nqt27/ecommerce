@@ -7,3 +7,9 @@
     color: white;
     margin: 1%;
 }
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+

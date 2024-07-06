@@ -22,6 +22,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+
                 </ul>
             </div>
             <div class="logo">
@@ -39,4 +40,44 @@
         </div>
     </header>
 </body>
+<footer>
+    
+    
+        <div class="footer-left">
+            <img src="{{ asset('image/logo.png') }}" alt="">
+            <span></span>
+            <div class="social">
+
+            </div>
+        </div>
+        
+        <div class="footer-center">
+            <div><h3>CONTACT</h3></div>
+            <div>
+                 <strong>Địa Chỉ:</strong> 
+                 <span>Số 29 đường số 3, KDC Vĩnh Lộc, P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM </span> 
+            </div>
+            <div>
+                <strong>Hotline: </strong>
+                <span></span>
+            </div>
+            <div>
+                <strong>Email: </strong>
+            </div>
+            <div>
+                <strong>Website: </strong>
+            </div>
+        </div>
+        
+        <div class="footer-right">
+            <div>
+                <h3>FANPAGE</h3>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+
+ 
+</footer>
 </html>
