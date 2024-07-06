@@ -41,8 +41,7 @@
         
         </div>
     </header>
-    
-    <footer >
+   
 
     <div class="container">
         <section class="main-body">
