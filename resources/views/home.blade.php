@@ -18,18 +18,10 @@
         <div class="main-header">
             <div class="navbar">
                 <ul>
-<<<<<<< HEAD
-                    <li><a href="#home">About us</a></li>
-                    <li><a href="#services">Product</a></li>
-                    <li><a href="#about">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-
-=======
                     <li><a href="#home">ABOUT US</a></li>
                     <li><a href="#services">PRODUCT</a></li>
                     <li><a href="#about">BLOG</a></li>
                     <li><a href="#contact">CONTACT</a></li>
->>>>>>> c38677f4eaec526e5167caec613e4ba86ff8d647
                 </ul>
             </div>
             <div class="logo">
