@@ -41,10 +41,9 @@
         
         </div>
     </header>
-<<<<<<< HEAD
     
     <footer >
-=======
+
     <div class="container">
         <section class="main-body">
             <div class="banner">
@@ -80,7 +79,6 @@
     </div>
 </body>
 <footer >
->>>>>>> 5a021a829632140b9131d7c41931ee6286a7bd3a
     
     <div class="container">
          <div class="footer-left">
