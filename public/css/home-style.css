@@ -1,11 +1,17 @@
 .top-header {
-    text-align: center;
+    display: flex;
     background-color: #493e3c;
-    padding: 1%;
+    justify-content: center;
+    align-items: center;
 }
-.top-header > * {
+.top-header * {
     color: white;
     margin: 1%;
+}
+.mar * {
+    display: inline-block;
+}
+.mar span {
 }
 
 footer {
@@ -34,58 +40,69 @@ footer .footer-right {
     padding: 10px;
 }
 
-.social{
+.social {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
 }
-.social i{
+.social i {
     font-size: 30px;
 }
-.product-content{
+.product-content {
     display: flex;
 }
-.product-title{
+.product-title {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.line{
+.line {
     width: 80%;
     height: 1px;
-
 }
-.product-title .line div{
-    border-top:1px solid;
+.product-title .line div {
+    border-top: 1px solid;
     height: 1px;
 }
 
-.product-title p{
+.product-title p {
     font-size: 35px;
 }
-
-.product-item:hover{
-    width: 81% !important;
+.product-item {
+    overflow: hidden;
 }
-.product-content .product-item{
-    width: 80%;
+.image_product {
+    overflow: hidden;
+    height: 290px;
 }
-.product-content .product-item img{
+.product-item:hover img {
+    width: 105% !important;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.product-item:hover .image_product {
+    background-image: url("../image/pr1.png");
     width: 100%;
 }
+.product-content .product-item {
+    width: 80%;
+}
+.product-content .product-item img {
+    width: 100%;
+}
+
 .product-content .product-item .cost-name {
     display: flex;
     justify-content: space-between;
 }
 
-.product-content .product-item .cost-name p{
-    font-size: 25px;
+.product-content .product-item .cost-name p {
+    margin-top: 10%;
+    font-size: 16px;
 }
 
-
-
-.fanpage_img img{
+.fanpage_img img {
     width: 90%;
 }
 
@@ -119,35 +136,46 @@ footer .footer-right div {
     padding: 2%;
 }
 .main-header .navbar {
-    width: 30%;
+    width: 40%;
 }
 .main-header .navbar ul {
+    width: 100%;
     display: flex;
     list-style-type: none;
     padding: 0;
+    align-items: center;
+    margin: 0;
 }
 .main-header .navbar ul li {
     margin: 5%;
 }
 .main-header .navbar ul li a {
     color: black;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.logo {
+    width: 40%;
+}
+.logo img {
+    width: 100%;
 }
 .right-header {
-    width: 30%;
+    width: 20%;
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
 }
 .right-header .search {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 20%;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 700;
     margin: 2%;
+    width: 40%;
 }
 .right-header .cart {
-    width: 15%;
+    width: 25%;
     margin: 2%;
 }
 .right-header .cart img {
