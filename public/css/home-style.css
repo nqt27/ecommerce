@@ -1,0 +1,9 @@
+.top-header {
+    text-align: center;
+    background-color: #493e3c;
+    padding: 1%;
+}
+.top-header > * {
+    color: white;
+    margin: 1%;
+}
