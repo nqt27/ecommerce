@@ -18,10 +18,18 @@
         <div class="main-header">
             <div class="navbar">
                 <ul>
+<<<<<<< HEAD
+=======
+
+>>>>>>> toan
                     <li><a href="#home">ABOUT US</a></li>
                     <li><a href="#services">PRODUCT</a></li>
                     <li><a href="#about">BLOG</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> toan
                 </ul>
             </div>
             <div class="logo">
