@@ -7,14 +7,15 @@
     color: white;
     margin: 1%;
 }
-<<<<<<< HEAD
 footer{
     display: flex;
     justify-content: space-around;
 }
+.footer-left .footer-center .footer-right{
+    height: 20%;
+}
 
 
-=======
 
 .main-header {
     display: flex;
@@ -46,4 +47,3 @@ footer{
 .right-header .cart img {
     width: 20%;
 }
->>>>>>> main
