@@ -35,6 +35,18 @@ footer .footer-left, footer .footer-center, footer .footer-right {
     padding: 10px; 
 }
 
+.social{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social i{
+    font-size: 30px;
+}
+
+.fanpage_img img{
+    width: 90%;
+}
 
 footer h3 {
     font-size: 1.5em; 
