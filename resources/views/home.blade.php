@@ -19,14 +19,6 @@
         <div class="main-header">
             <div class="navbar">
                 <ul>
-<<<<<<< HEAD
-                    <li><a href="#home">About us</a></li>
-                    <li><a href="#services">Product</a></li>
-                    <li><a href="#about">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-
-=======
->>>>>>> d33d1fa5de327433d9164d8436180c123d7db07c
                     <li><a href="#home">ABOUT US</a></li>
                     <li><a href="#services">PRODUCT</a></li>
                     <li><a href="#about">BLOG</a></li>
