@@ -41,6 +41,39 @@
         
         </div>
     </header>
+    <div class="container">
+        <section class="main-body">
+            <div class="banner">
+                <img src="{{ asset('image/banner1.png') }}" alt="">
+            </div>
+            <div class="category">
+                <a href="#">
+                    <div class="cate-item">
+                        <i class="bi bi-backpack"></i>
+                        <p>Backpacks</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="cate-item">
+                    <i class="bi bi-wallet2"></i>
+                        <p>Wallets</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="cate-item">
+                    <i class="bi bi-handbag"></i>
+                        <p>Tote & Accessory</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="cate-item">
+                    <i class="bi bi-briefcase"></i>
+                        <p>Cross bags</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
 </body>
 <footer >
     
