@@ -74,6 +74,266 @@
                     </div>
                 </a>
             </div>
+            <div class="product">
+                <div class="product-title">
+                    <p>Backpacks</p>
+                    <div class= "line">
+                        <div></div>
+                    </div>
+                    <a href="#">MORE <span>>></span></a> 
+                 </div>
+                 <div class="product-content">
+                   
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr1.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr2.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr3.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr4.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="product">
+                <div class="product-title">
+                    <p>Backpacks</p>
+                    <div class= "line">
+                        <div></div>
+                    </div>
+                    <a href="#">MORE <span>>></span></a> 
+                 </div>
+                 <div class="product-content">
+                   
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr1.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr2.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr3.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr4.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="product">
+                <div class="product-title">
+                    <p>Backpacks</p>
+                    <div class= "line">
+                        <div></div>
+                    </div>
+                    <a href="#">MORE <span>>></span></a> 
+                 </div>
+                 <div class="product-content">
+                   
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr1.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr2.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr3.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr4.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="product">
+                <div class="product-title">
+                    <p>Backpacks</p>
+                    <div class= "line">
+                        <div></div>
+                    </div>
+                    <a href="#">MORE <span>>></span></a> 
+                 </div>
+                 <div class="product-content">
+                   
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr1.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr2.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr3.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-item">
+                            <div class="image_product">
+                                <img src="{{ asset('image/pr4.png') }}" alt="">
+                                <div class="cost-name">
+                                    <p>Mid Backpack</p>
+                                    
+                                    <p>800.000 VND</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
         </section>
     </div>
 </body>

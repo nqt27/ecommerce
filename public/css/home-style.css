@@ -42,6 +42,49 @@ footer .footer-right {
 .social i{
     font-size: 30px;
 }
+.product-content{
+    display: flex;
+}
+.product-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line{
+    width: 80%;
+    height: 1px;
+
+}
+.product-title .line div{
+    border-top:1px solid;
+    height: 1px;
+}
+
+.product-title p{
+    font-size: 35px;
+}
+
+.product-item:hover{
+    box-shadow: 1px 1px 1px 1px;
+    width: 81% !important;
+}
+.product-content .product-item{
+    width: 80%;
+}
+.product-content .product-item img{
+    width: 100%;
+}
+.product-content .product-item .cost-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-content .product-item .cost-name p{
+    font-size: 25px;
+}
+
+
 
 .fanpage_img img{
     width: 90%;
