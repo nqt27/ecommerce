@@ -7,12 +7,55 @@
     color: white;
     margin: 1%;
 }
-footer{
-    display: flex;
-    justify-content: space-around;
+
+
+
+footer {
+    background-color: #f8f8f8; /* Màu nền cho footer */
+    padding: 20px 0; /* Khoảng cách trên và dưới */
+    font-size: 0.9em; /* Thu nhỏ font chữ */
 }
-.footer-left .footer-center .footer-right{
-    height: 20%;
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+footer .footer-left, footer .footer-center, footer .footer-right {
+    flex: 1; 
+    margin: 0 30px; 
+}
+    
+
+.footer-left > div {
+    padding: 10px; 
+}
+
+
+footer h3 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+footer strong {
+    display: block; 
+    margin-bottom: 5px;
+}
+
+footer .social {
+    margin-top: 10px; 
+}
+
+footer .footer-left img {
+    max-width: 250px;
+}
+
+footer .footer-center div, footer .footer-right div {
+    margin-bottom: 10px; 
 }
 
 

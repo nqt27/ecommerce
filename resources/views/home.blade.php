@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home-style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,18 +19,15 @@
         <div class="main-header">
             <div class="navbar">
                 <ul>
-<<<<<<< HEAD
                     <li><a href="#home">About us</a></li>
                     <li><a href="#services">Product</a></li>
                     <li><a href="#about">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
 
-=======
                     <li><a href="#home">ABOUT US</a></li>
                     <li><a href="#services">PRODUCT</a></li>
                     <li><a href="#about">BLOG</a></li>
                     <li><a href="#contact">CONTACT</a></li>
->>>>>>> c38677f4eaec526e5167caec613e4ba86ff8d647
                 </ul>
             </div>
             <div class="logo">
@@ -49,12 +47,17 @@
         </div>
     </header>
 </body>
-<footer>
+<footer >
     
-    
-        <div class="footer-left">
-            <img src="{{ asset('image/logo.png') }}" alt="">
-            <span></span>
+    <div class="container">
+         <div class="footer-left">
+            <div>
+                <img src="{{ asset('image/logo.png') }}" alt="">
+
+            </div>
+                <div>
+                    <span>Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và và cản trở việc tập trung vào yếu tố trình bày văn bản</span>
+                </div>
             <div class="social">
 
             </div>
@@ -67,11 +70,12 @@
                  <span>Số 29 đường số 3, KDC Vĩnh Lộc, P. Bình Hưng Hòa, Q. Bình Tân, Tp. HCM </span> 
             </div>
             <div>
-                <strong>Hotline: </strong>
+                
+                <strong><i class="bi bi-telephone-inbound"></i>  Hotline: </strong>
                 <span></span>
             </div>
             <div>
-                <strong>Email: </strong>
+                <strong><i class="bi bi-envelope-at"></i> Email: </strong>
             </div>
             <div>
                 <strong>Website: </strong>
@@ -87,6 +91,8 @@
             </div>
         </div>
 
+    </div>
+       
  
 </footer>
 </html>
