@@ -8,8 +8,6 @@
     margin: 1%;
 }
 
-
-
 footer {
     background-color: #f8f8f8; /* Màu nền cho footer */
     padding: 20px 0; /* Khoảng cách trên và dưới */
@@ -19,20 +17,21 @@ footer {
 footer .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 15px; 
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-footer .footer-left, footer .footer-center, footer .footer-right {
-    flex: 1; 
-    margin: 0 30px; 
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+    flex: 1;
+    margin: 0 30px;
 }
-    
 
 .footer-left > div {
-    padding: 10px; 
+    padding: 10px;
 }
 
 .social{
@@ -49,28 +48,27 @@ footer .footer-left, footer .footer-center, footer .footer-right {
 }
 
 footer h3 {
-    font-size: 1.5em; 
-    margin-bottom: 10px; 
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 footer strong {
-    display: block; 
+    display: block;
     margin-bottom: 5px;
 }
 
 footer .social {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 footer .footer-left img {
     max-width: 250px;
 }
 
-footer .footer-center div, footer .footer-right div {
-    margin-bottom: 10px; 
+footer .footer-center div,
+footer .footer-right div {
+    margin-bottom: 10px;
 }
-
-
 
 .main-header {
     display: flex;
@@ -112,4 +110,21 @@ footer .footer-center div, footer .footer-right div {
 }
 .right-header .cart img {
     width: 50%;
+}
+
+.banner img {
+    width: 100%;
+}
+.category {
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+.category .cate-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.category .cate-item i {
+    font-size: 70px;
 }
