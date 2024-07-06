@@ -11,6 +11,9 @@ footer{
     display: flex;
     justify-content: space-around;
 }
+.footer-left .footer-center .footer-right{
+    height: 20%;
+}
 
 
 
