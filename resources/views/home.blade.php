@@ -72,50 +72,19 @@
                     <a href="#">MORE <span>>></span></a> 
                  </div>
                  <div class="product-content">
+                 @foreach ($products as $p)
                  <a href="#">
                         <div class="product-item">
                             <div class="image_product">
-                                <img src="{{ asset('image/pr1.png') }}" alt=""> 
+                                <img src="{{ asset($p->image) }}" alt=""> 
                             </div>
                                 <div class="cost-name">
-                                    <p>Mid Backpack</p>
-                                    <p>800.000 VND</p>
+                                    <p>{{$p->name}}</p>
+                                    <p>{{$p->price}} VND</p>
                                 </div>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="product-item">
-                            <div class="image_product">
-                                <img src="{{ asset('image/pr2.png') }}" alt=""> 
-                            </div>
-                                <div class="cost-name">
-                                    <p>Mid Backpack</p>
-                                    <p>800.000 VND</p>
-                                </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-item">
-                            <div class="image_product">
-                                <img src="{{ asset('image/pr3.png') }}" alt=""> 
-                            </div>
-                                <div class="cost-name">
-                                    <p>Mid Backpack</p>
-                                    <p>800.000 VND</p>
-                                </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-item">
-                            <div class="image_product">
-                                <img src="{{ asset('image/pr4.png') }}" alt=""> 
-                            </div>
-                                <div class="cost-name">
-                                    <p>Mid Backpack</p>
-                                    <p>800.000 VND</p>
-                                </div>
-                        </div>
-                    </a>
+                    @endforeach
                 </div>
                 
             </div>

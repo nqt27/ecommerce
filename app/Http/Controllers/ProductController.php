@@ -3,12 +3,12 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Routing\Controller;
-use App\Models\Category; 
+use App\Models\Product; 
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     public function index()
     {
-        return Category::all();
+        return Product::all();
     }
 }

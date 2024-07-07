@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +16,10 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', [CategoryController::class, 'index']);
+
+Route::get('/', function (CategoryController $categoryController, ProductController $productController) {
+    $categories = $categoryController->index();
+    $products = $productController->index();
+
+    return app(HomeController::class)->index($categories, $products);
+});
