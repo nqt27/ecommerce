@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', function () {
 Route::get('/adminPage', function(){
     return view('adminPage');
 });
+Route::get('/', [CategoryController::class, 'index']);
