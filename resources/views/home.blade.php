@@ -54,30 +54,14 @@
                 <img src="{{ asset('image/banner1.png') }}" alt="">
             </div>
             <div class="category">
+                @foreach ($categories as $cate)
                 <a href="#">
                     <div class="cate-item">
-                        <i class="bi bi-backpack"></i>
-                        <p>Backpacks</p>
+                        {!! $cate->image !!}
+                        <p>{{$cate->name}}</p>
                     </div>
                 </a>
-                <a href="#">
-                    <div class="cate-item">
-                    <i class="bi bi-wallet2"></i>
-                        <p>Wallets</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="cate-item">
-                    <i class="bi bi-handbag"></i>
-                        <p>Tote & Accessory</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="cate-item">
-                    <i class="bi bi-briefcase"></i>
-                        <p>Cross bags</p>
-                    </div>
-                </a>
+                @endforeach
             </div>
             <div class="product">
                 <div class="product-title">
