@@ -16,6 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+<<<<<<< HEAD
 
 Route::get('/', function (CategoryController $categoryController, ProductController $productController) {
     $categories = $categoryController->index();
@@ -23,3 +24,12 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 
     return app(HomeController::class)->index($categories, $products);
 });
+=======
+Route::get('/', function () {
+    return view('home');
+});
+Route::get('/adminPage', function(){
+    return view('adminPage');
+});
+Route::get('/', [CategoryController::class, 'index']);
+>>>>>>> 92cb416bfe1268d194f884954133c2c2e79ed127
