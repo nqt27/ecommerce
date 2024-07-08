@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+<<<<<<< HEAD
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 
+=======
+>>>>>>> dat
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +31,17 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/adminPage', function(){
-    return view('adminPage');
+Route::get('/adminPage-layout', function () {
+    return view('admin.adminPage-layout');
 });
 Route::get('/', [CategoryController::class, 'index']);
+<<<<<<< HEAD
 >>>>>>> 92cb416bfe1268d194f884954133c2c2e79ed127
+=======
+
+
+Route::get('/adminPage-layout', function () {
+    return view('admin.List-Category');
+});
+
+>>>>>>> dat
