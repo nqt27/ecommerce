@@ -44,4 +44,11 @@ Route::get('/adminPage-layout', function () {
     return view('admin.List-Category');
 });
 
+<<<<<<< HEAD
+>>>>>>> dat
+=======
+// Route::get('/adminPage-layout', function () {
+//     return view('admin.create-category');
+// });
+
 >>>>>>> dat
