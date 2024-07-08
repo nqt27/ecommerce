@@ -21,15 +21,3 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 
     return app(HomeController::class)->index($categories, $products);
 });
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/adminPage-layout', function () {
-    return view('admin.adminPage-layout');
-});
-Route::get('/', [CategoryController::class, 'index']);
-
-Route::get('/adminPage-layout', function () {
-    return view('admin.List-Category');
-});
-
