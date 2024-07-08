@@ -3,18 +3,14 @@
     background-color: #493e3c;
     justify-content: center;
     align-items: center;
-
 }
 .top-header * {
     color: white;
     margin: 1%;
 }
-.mar * {
-    display: inline-block;
+.top-header marquee {
+    width: 10%;
 }
-.mar span {
-}
-
 footer {
     background-color: #f8f8f8; /* Màu nền cho footer */
     padding: 20px 0; /* Khoảng cách trên và dưới */
