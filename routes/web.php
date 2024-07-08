@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +16,13 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/adminPage', function(){
-    return view('adminPage');
+Route::get('/adminPage-layout', function () {
+    return view('admin.adminPage-layout');
 });
 Route::get('/', [CategoryController::class, 'index']);
+
+
+Route::get('/adminPage-layout', function () {
+    return view('admin.List-Category');
+});
+
