@@ -26,3 +26,7 @@ Route::get('/adminPage-layout', function () {
     return view('admin.List-Category');
 });
 
+// Route::get('/adminPage-layout', function () {
+//     return view('admin.create-category');
+// });
+
