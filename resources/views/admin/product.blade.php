@@ -66,11 +66,20 @@
                             <th>Description</th>
                             <th>Image</th>
                             <th>Price</th>
-                            <th>Category ID</th>
+                            <th>Category</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Dynamic content will be inserted here -->
+                    @foreach($products as $p)
+                        <tr>
+                            <td>{{$p->id}}</td>
+                            <td>{{$p->name}}</td>
+                            <td>{!! $p->description !!}</td>
+                                <td><img src="{{ asset($p->image) }}" alt=""></td>
+                            <td>{{$p->price}}</td>
+                            <td>{{$p->category_id}}</td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </section>

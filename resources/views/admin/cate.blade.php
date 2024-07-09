@@ -63,14 +63,19 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Description</th>
                             <th>Image</th>
-                            <th>Price</th>
-                            <th>Category ID</th>
+                            <th>Role</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Dynamic content will be inserted here -->
+                        @foreach($categories as $c)
+                        <tr>
+                            <td>{{$c->id}}</td>
+                            <td>{{$c->name}}</td>
+                            <td>{!! $c->image !!}</td>
+                            <td>{{$c->role}}</td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </section>
