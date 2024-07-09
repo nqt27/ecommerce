@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index(){
-        return view('admin.ListCategory');
+    public function index($categories, $products)
+    {
+        return view('admin', [
+            'categories' => $categories,
+            'products' => $products
+        ]);
     }
-    public function create(){
-        return view('admin.CreateCategory');
-    }
-
    
 }

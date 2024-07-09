@@ -17,7 +17,6 @@
 
 <body class="hold-transition sidebar-mini layout-footer-fixed">
     <div class="wrapper">
-        
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -34,9 +33,8 @@
             </ul>
         </nav>
 
-      
-                <!-- Main Sidebar Container -->
-            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <a href="#" class="brand-link">
                     <span class="brand-text font-weight-light">Admin</span>
                 </a>
@@ -44,70 +42,22 @@
           
        
                 <li class="nav-item">
-                    <a href="{{route('admin.ListCategory')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     <p>
                         Sản phẩm
                     </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.CreateCategory')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                     <p>
                         Thêm sản phẩm
                     </p>
                     </a>
                 </li>
             </aside>
+
         
-
-            <!-- Content Wrapper -->
-        <div class="content-wrapper">
-            
-            <form method="post" class = "form-wrapper">
-                <div class="row pb-2 ">
-                    <h2 class="text-primary">Create Category</h2>
-                    <hr>
-                </div>
-                <div class="mb-3 row">
-                    <label class="p-0">Name</label>
-                    <input class="form-control" name="name"/>
-                </div>
-                   
-                    
-                <div class="mb-3 row p-1">
-                    <label class="p-0">Price</label>
-                    <input class="form-control" name="price"/>
-                </div>
-                <div class="mb-3 row p-1">
-                    <label class="p-0">Category ID</label>
-                    <select name="category_id" class="form-control">
-                    <!-- Add options here -->
-                    </select>
-                </div>
-
-                <div class="mb-3 row ">
-                    <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3 row p-1">
-                    <label  class="p-0">Image</label>
-                    <input type="file" class="form-control">
-                </div>
-                
-                <div class="row">
-                    <div class="col-6">
-                        <button type="submit" class="btn btn-primary form-control">Create</button>
-                    </div>
-                    <div class="col-6">
-                        <a href="{{route('admin.ListCategory')}}" class="btn btn-secondary form-control">Back to list</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-            <!-- /.content-wrapper -->
-        
-
         <!-- Footer -->
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
@@ -123,5 +73,3 @@
     </div>
 </body>
 </html>
-
-   

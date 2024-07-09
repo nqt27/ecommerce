@@ -28,11 +28,10 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 
     return app(HomeController::class)->index($categories, $products);
 });
+Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
+    $categories = $categoryController->index();
+    $products = $productController->index();
 
-//admin page
-Route::get('/admin/ListCategory', [AdminController::class, 'index'])->name('admin.ListCategory');
-Route::get('/admin/CreateCategory', [AdminController::class, 'create'])->name('admin.CreateCategory');
+    return app(AdminController::class)->index($categories, $products);
+});
 
-//login
-Route::get('/Auth/login',[LoginController::class,'index'])->name('Auth.login');
-Route::get('/Auth/register',[RegisterController::class,'index'])->name('Auth.register');
