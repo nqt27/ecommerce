@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,8 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 
     return app(HomeController::class)->index($categories, $products);
 });
+
+//admin page
+Route::get('/admin/ListCategory', [AdminController::class, 'index'])->name('admin.ListCategory');
+Route::get('/admin/CreateCategory', [AdminController::class, 'create'])->name('admin.CreateCategory');
+

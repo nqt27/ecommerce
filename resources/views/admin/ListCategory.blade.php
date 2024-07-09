@@ -35,14 +35,64 @@
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="#" class="brand-link">
-                <span class="brand-text font-weight-light">Admin</span>
-            </a>
-        </aside>
+                <a href="#" class="brand-link">
+                    <span class="brand-text font-weight-light">Admin</span>
+                </a>
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          
+       
+                <li class="nav-item">
+                    <a href="{{route('admin.ListCategory')}}" class="nav-link">
+                    <p>
+                        Sản phẩm
+                    </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.CreateCategory')}}" class="nav-link">
+                    <p>
+                        Thêm sản phẩm
+                    </p>
+                    </a>
+                </li>
+            </aside>
 
         <!-- Content Wrapper -->
         <div class="content-wrapper">
-            @yield('content')
+           
+            <section class="content-header">
+                <div class="row pt-4">
+                    <div class="col-6">
+                        <h2 class="text-primary">Category List</h2>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a class="btn btn-primary" href= "{{route('admin.CreateCategory')}}"> <!-- Add the correct URL to href -->
+                            <i class="bi bi-plus-circle"></i> Create Category
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                            <th>Category ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be inserted here -->
+                    </tbody>
+                </table>
+            </section>
+
+
         </div>
         <!-- /.content-wrapper -->
 
