@@ -5,6 +5,10 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Authentication\LoginController;
+use App\Http\Controllers\Authentication\RegisterController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +33,6 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 Route::get('/admin/ListCategory', [AdminController::class, 'index'])->name('admin.ListCategory');
 Route::get('/admin/CreateCategory', [AdminController::class, 'create'])->name('admin.CreateCategory');
 
+//login
+Route::get('/Auth/login',[LoginController::class,'index'])->name('Auth.login');
+Route::get('/Auth/register',[RegisterController::class,'index'])->name('Auth.register');
