@@ -28,11 +28,20 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
 
     return app(HomeController::class)->index($categories, $products);
 });
+Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
+    $categories = $categoryController->index();
+    $products = $productController->index();
 
-//admin page
-Route::get('/admin/ListCategory', [AdminController::class, 'index'])->name('admin.ListCategory');
-Route::get('/admin/CreateCategory', [AdminController::class, 'create'])->name('admin.CreateCategory');
+    return app(AdminController::class)->index($categories, $products);
+})->name('admin');
+Route::get('/admin/category', function (CategoryController $categoryController) {
+    $categories = $categoryController->index();
 
-//login
-Route::get('/Auth/login',[LoginController::class,'index'])->name('Auth.login');
-Route::get('/Auth/register',[RegisterController::class,'index'])->name('Auth.register');
+    return app(AdminController::class)->category($categories);
+})->name('admin.cate');
+Route::get('/admin/product', function (ProductController $productController) {
+    $products = $productController->index();
+
+    return app(AdminController::class)->product($products);
+})->name('admin.product');
+
