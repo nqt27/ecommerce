@@ -33,5 +33,15 @@ Route::get('/admin', function (CategoryController $categoryController, ProductCo
     $products = $productController->index();
 
     return app(AdminController::class)->index($categories, $products);
-});
+})->name('admin');
+Route::get('/admin/category', function (CategoryController $categoryController) {
+    $categories = $categoryController->index();
+
+    return app(AdminController::class)->category($categories);
+})->name('admin.cate');
+Route::get('/admin/product', function (ProductController $productController) {
+    $products = $productController->index();
+
+    return app(AdminController::class)->product($products);
+})->name('admin.product');
 
