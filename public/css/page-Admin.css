@@ -8,7 +8,9 @@
 }
 .main-sidebar {
     position: fixed !important;
+   
 }
+
 .content img {
     width: 30%;
 }
