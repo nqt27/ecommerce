@@ -25,5 +25,17 @@ class AdminController extends Controller
             'products' => $products
         ]);
     }
+    public function addCategory($categories)
+    {
+        return view('admin.addCate', [
+            'categories' => $categories
+        ]);
+    }
+    public function addProduct($products)
+    {
+        return view('admin.addProduct', [
+            'products' => $products
+        ]);
+    }
    
 }

@@ -32,8 +32,7 @@
                         <h2 class="text-primary">Product List</h2>
                     </div>
                     <div class="col-6 text-end">
-                        <a class="btn btn-primary" href="#">
-                            <!-- Add the correct URL to href -->
+                        <a class="btn btn-primary" href= "#"> <!-- Add the correct URL to href -->
                             <i class="bi bi-plus-circle"></i> Add
                         </a>
                     </div>
