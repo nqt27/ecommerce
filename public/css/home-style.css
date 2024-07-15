@@ -74,29 +74,22 @@ footer .footer-right {
     height: 290px;
 }
 .product-item:hover img {
-    width: 105% !important;
-    opacity: 0;
+    transform: scale(1.1);
     transition: 0.5s ease;
 }
-.product-item:hover .image_product {
-    background-image: url("../image/pr1.png");
-    width: 100%;
-}
-.product-content .product-item {
-    width: 80%;
+
+.product-content a {
+    width: 25%;
+    margin: 1%;
 }
 .product-content .product-item img {
     width: 100%;
 }
 
-.product-content .product-item .cost-name {
-    display: flex;
-    justify-content: space-between;
-}
-
 .product-content .product-item .cost-name p {
     margin-top: 10%;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 .fanpage_img img {
