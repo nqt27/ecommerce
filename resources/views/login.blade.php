@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> toan
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,11 +52,19 @@
                     <button class="btn btn-lg btn-light w-100 fs-6"><i class="bi bi-google me-2" style="width:25px;"></i><small>Sign In with Google</small></button>
                 </div>
                 <div class="row">
+<<<<<<< HEAD
                     <small>Don't have account? <a href="">Sign Up</a></small>
+=======
+                    <small>Don't have account? <a href="{{route('Auth.register')}}">Sign Up</a></small>
+>>>>>>> toan
                 </div>
           </div>
        </div> 
       </div>
     </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> toan
