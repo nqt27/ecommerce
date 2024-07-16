@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/product-content.css') }}">
     <title>Document</title>
 </head>
+
 <body>
     @include('home-page.layout_header')
     <div class="container">
@@ -19,15 +21,11 @@
             </div>
             <div class="content-left__item-cate">
                 <ul class="cow">
-                   <li class="cate-item">
-                        <a href="#" class="cate-item_link">Ao so mi</a>
-                   </li>
-                   <li class="cate-item">
-                        <a href="#" class="cate-item_link">Ao so mi</a>
-                   </li>
-                   <li class="cate-item">
-                        <a href="#" class="cate-item_link">Ao so mi</a>
-                   </li>
+                    @foreach($categories as $cate)
+                    <li class="cate-item">
+                        <a href="#" class="cate-item_link">{{$cate->name}}</a>
+                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -42,106 +40,42 @@
                         <option value="2">Từ Z-A</option>
                         <option value="3">Từ thấp tới cao</option>
                         <option value="4">Từ cao tới thấp</option>
-                      </select>
+                    </select>
                 </div>
             </div>
             <div class="product-item">
+                @foreach($products as $p)
                 <div class="item">
-                    
-                        <a href="#">
-                            <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="item-img">
-                        </a> 
-                        <span class="item-name">
-                            Áo đồng phục sơ mi dài tay màu trắng 
-                        </span>
-                        <span class="item-price">
-                            350.000
-                        </span>                   
-                </div>
-                <div class="item">                   
                     <a href="#">
-                        <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="item-img">
-                    </a> 
+                        <img src="{{ asset($p->image) }}" class="item-img">
+                    </a>
                     <span class="item-name">
-                        Áo đồng phục sơ mi dài tay màu trắng 
+                        {{$p->name}}
                     </span>
                     <span class="item-price">
-                        350.000
-                    </span>                           
-            </div>
-            <div class="item">
-                    
-                <a href="#">
-                    <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="item-img">
-                </a> 
-                <span class="item-name">
-                    Áo đồng phục sơ mi dài tay màu trắng 
-                </span>
-                <span class="item-price">
-                    350.000
-                </span>
-          
-           
-        </div><div class="item">
-                    
-            <a href="#">
-                <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="item-img">
-            </a> 
-            <span class="item-name">
-                Áo đồng phục sơ mi dài tay màu trắng 
-            </span>
-            <span class="item-price">
-                350.000
-            </span>
-      
-       
-    </div>
-                    <div class="item">
-                                    
-                        <a href="#">
-                            <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="item-img">
-                        </a> 
-                        <span class="item-name">
-                            Áo đồng phục sơ mi dài tay màu trắng 
-                        </span>
-                        <span class="item-price">
-                            350.000
-                        </span>
-                
-                
-                </div>
-                <div class="item">
-                                    
-                    <a href="#">
-                        <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="item-img">
-                    </a> 
-                    <span class="item-name">
-                        Áo đồng phục sơ mi dài tay màu trắng 
+                        {{$p->price}}
                     </span>
-                    <span class="item-price">
-                        350.000
-                    </span>
-
-
                 </div>
+                @endforeach
             </div>
-            
+
             <div class="next-page">
                 <nav aria-label="Page navigation example" class="box">
                     <ul class="pagination">
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
                     </ul>
-                  </nav>
+                </nav>
             </div>
-                
-            
+
+
         </div>
-        
+
     </div>
 
     @include('home-page.layout_footer')
 
 </body>
+
 </html>
