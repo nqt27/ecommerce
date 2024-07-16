@@ -6,9 +6,9 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
-use App\Http\Controllers\Authentication\LoginController;
-use App\Http\Controllers\Authentication\RegisterController;
 
 
 
@@ -18,7 +18,7 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
     $categories = $categoryController->index();
     $products = $productController->index();
     return app(HomeController::class)->index($categories, $products);
-});
+})->name('home');
 
 Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
     $categories = $categoryController->index();
@@ -53,3 +53,6 @@ Route::post('/admin/Product', [ProductController::class, 'store'])->name('produc
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
