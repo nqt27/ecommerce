@@ -1,3 +1,7 @@
+header{
+    box-shadow: 1px 1px 1px 1px ;
+}
+
 .top-header {
     display: flex;
     background-color: #493e3c;
