@@ -15,6 +15,10 @@ header{
 .top-header marquee {
     width: 10%;
 }
+
+.navbar a{
+    text-decoration: none;
+}
 footer {
     background-color: #f8f8f8; /* Màu nền cho footer */
     padding: 20px 0; /* Khoảng cách trên và dưới */
