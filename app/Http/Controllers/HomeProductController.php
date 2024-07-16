@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class HomeProductController extends Controller
 {
     public function index($categories, $products)
     {
-        return view('home', [
+        return view('home-page.product-home', [
             'categories' => $categories,
             'products' => $products
         ]);

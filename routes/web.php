@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeProductController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
@@ -19,6 +20,11 @@ Route::get('/', function (CategoryController $categoryController, ProductControl
     $products = $productController->index();
     return app(HomeController::class)->index($categories, $products);
 })->name('home');
+Route::get('/home-product', function (CategoryController $categoryController, ProductController $productController) {
+    $categories = $categoryController->index();
+    $products = $productController->index();
+    return app(HomeProductController::class)->index($categories, $products);
+})->name('home-product');
 
 Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
     $categories = $categoryController->index();
