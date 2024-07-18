@@ -102,7 +102,7 @@
                         <button type="submit" class="btn btn-primary form-control">Create</button>
                     </div>
                     <div class="col-6">
-                        <a href="{{route('admin.product')}}" class="btn btn-secondary form-control">Back to list</a>
+                        <a href="{{route('products.store')}}" class="btn btn-secondary form-control">Back to list</a>
                     </div>
                 </div>
             </form>
