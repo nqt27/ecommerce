@@ -1,0 +1,90 @@
+.container{
+    display: grid;
+}
+
+.content-top{
+   display: flex;
+}
+
+#carouselExampleIndicators{
+   width:40%;
+   height: auto;
+   margin-top : 20px;
+   margin-left : 50px;
+}
+
+#product-info{
+   margin-left: 25px;
+}
+
+#product-info select{
+   display: block;
+   padding:5px 10px;
+
+}
+
+#product-info input{
+   width: 50px;
+   height: 40px;
+   padding-left :10px;
+   font-size : 16px;
+   margin-right: 10px;
+   
+}
+
+.content-bottom{
+   display: grid;
+}
+.tilte{
+    margin-top : 40px;
+}
+
+.tilte span{
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;   
+}
+
+.product-item{
+    margin-top: 70px;
+    display: grid;
+    padding-right: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 65px;
+ }
+ 
+
+.item{
+   overflow: hidden;
+   width: 300px;
+   height: 400px;
+   box-shadow: 0 0 0 1px #e1e1e1;
+   border-radius: 10px;
+}
+
+.item a img{
+   width: 300px;
+   height: 300px;
+   border-radius: 10px;
+   transition: transform 0.3s ease;
+}
+
+.item:hover img {
+   transform: scale(1.03); /* Tăng kích thước lên 103% */
+}
+
+.item-name a{
+   display: block;
+   margin-top : 10px;
+   font-family: 'Arial', sans-serif;   
+   text-align: center; 
+   text-decoration: none;
+   color:#222222;    
+
+}
+.item-name a:hover{
+   color:rgb(55, 133, 131);
+}
+.item-price{
+   margin-left : 210px;
+   color : red;
+}
