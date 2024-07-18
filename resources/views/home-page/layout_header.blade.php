@@ -16,7 +16,7 @@
             </div>
             <div class="logo">
                 <a href="{{asset('/')}}"> 
-                    <img src="{{ asset('image/logo.png') }}" alt="">
+                    <img src="https://demerite.com.vn/thumbs/222x42x2/upload/photo/logo-footer-2891.png" alt="">
                 </a>
             </div>
             <div class="right-header">
