@@ -32,12 +32,7 @@
                         <h2 class="text-primary">Category List</h2>
                     </div>
                     <div class="col-6 text-end">
-<<<<<<< HEAD
-                        <a class="btn btn-primary" href="#">
-                            <!-- Add the correct URL to href -->
-=======
                         <a class="btn btn-primary" href= "{{route('admin.addCate')}}"> <!-- Add the correct URL to href -->
->>>>>>> 293cbb96af1f341aae955d693399d158a61a87b8
                             <i class="bi bi-plus-circle"></i> Add
                         </a>
                     </div>

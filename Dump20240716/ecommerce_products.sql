@@ -16,34 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `products`
---
-
-DROP TABLE IF EXISTS `products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `products` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` decimal(8,2) NOT NULL,
-  `category_id` bigint unsigned NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `products_category_id_foreign` (`category_id`),
-  CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `products`
 --
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Mid Backpack','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, totam eveniet distinctio ex nulla odio pariatur quis. Hic nisi, veritatis, corrupti voluptate dolorem corporis excepturi molestiae nostrum cupiditate officiis inventore?','image/pr1.png',800000.00,1,NULL,NULL),(15,'Nomad Backpack','- Chất liệu: Vải Polyester cao cấp có khả năng trượt nước\r\n- Màu sắc : Black / Light Gray / Beige / Navy\r\n- Kích thước: 41 x 29 x 13 cm (Chiều Cao x Chiều Dài x Chiều Rộng )\r\n- Ngăn chống sốc: Đựng vừa laptop 15.6 inch','storage/image/kRXmsa5e5us0dbMRa2PfRDL80iSslKd2yUYwKMRu.jpg',450000.00,1,'2024-07-14 18:46:46','2024-07-14 18:46:46'),(16,'Basic Backpack V1','- Chất liệu: Vải Polyester cao cấp có khả năng trượt nước\r\n - Màu sắc : Black / Light Gray / Beige / Navy\r\n - Kích thước: 41 x 29 x 13 cm (Chiều Cao x Chiều Dài x Chiều Rộng )\r\n - Ngăn chống sốc: Đựng vừa laptop 15.6 inch','storage/image/g85vfcb63IkWm820lUnt4lo4hbgHKGs1Qr1u5TBh.jpg',320000.00,1,'2024-07-14 18:48:17','2024-07-14 18:48:17'),(17,'Basic Backpack V1','- Chất liệu: Vải Polyester cao cấp có khả năng trượt nước - Màu sắc : Black / Light Gray / Beige / Navy - Kích thước: 41 x 29 x 13 cm (Chiều Cao x Chiều Dài x Chiều Rộng ) - Ngăn chống sốc: Đựng vừa laptop 15.6 inch','storage/image/frmS3ztepSitzlzF3U8SasWbJOcSISM7LWXa6h8M.jpg',320000.00,1,'2024-07-14 18:49:10','2024-07-14 18:49:10');
+INSERT INTO `products` VALUES (1,'Mid Backpack','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, totam eveniet distinctio ex nulla odio pariatur quis. Hic nisi, veritatis, corrupti voluptate dolorem corporis excepturi molestiae nostrum cupiditate officiis inventore?','image/pr1.png',800000.00,1,NULL,NULL),(15,'Nomad Backpack','- Chất liệu: Vải Polyester cao cấp có khả năng trượt nước\r\n- Màu sắc : Black / Light Gray / Beige / Navy\r\n- Kích thước: 41 x 29 x 13 cm (Chiều Cao x Chiều Dài x Chiều Rộng )\r\n- Ngăn chống sốc: Đựng vừa laptop 15.6 inch','storage/image/kRXmsa5e5us0dbMRa2PfRDL80iSslKd2yUYwKMRu.jpg',450000.00,1,'2024-07-14 18:46:46','2024-07-14 18:46:46'),(16,'Basic Backpack V1','- Chất liệu: Vải Polyester cao cấp có khả năng trượt nước\r\n - Màu sắc : Black / Light Gray / Beige / Navy\r\n - Kích thước: 41 x 29 x 13 cm (Chiều Cao x Chiều Dài x Chiều Rộng )\r\n - Ngăn chống sốc: Đựng vừa laptop 15.6 inch','storage/image/g85vfcb63IkWm820lUnt4lo4hbgHKGs1Qr1u5TBh.jpg',320000.00,1,'2024-07-14 18:48:17','2024-07-14 18:48:17'),(17,'Basic Backpack V1','- Chất liệu: Vải Polyester cao cấp có khả năng trượt nước - Màu sắc : Black / Light Gray / Beige / Navy - Kích thước: 41 x 29 x 13 cm (Chiều Cao x Chiều Dài x Chiều Rộng ) - Ngăn chống sốc: Đựng vừa laptop 15.6 inch','storage/image/frmS3ztepSitzlzF3U8SasWbJOcSISM7LWXa6h8M.jpg',320000.00,1,'2024-07-14 18:49:10','2024-07-14 18:49:10'),(18,'Urban Backpack','Perfect for daily commute with multiple compartments for organization.','https://www.vascara.com/uploads/cms_productmedia/2024/June/26/tui-pocket-mini-vai-du-da-ngan---sho-0256---mau-be__76807__1719387433-medium.jpg',600000.00,1,'2024-07-16 02:00:00','2024-07-16 02:00:00'),(19,'Explorer Backpack','Durable and spacious, ideal for travel and outdoor activities.','https://www.vascara.com/uploads/cms_productmedia/2024/June/26/tui-deo-vai-y2k-nhan-quai-ban-ca-tinh---sho-0253---mau-xanh-la__76814__1719387561-medium.jpg',750000.00,1,'2024-07-16 02:10:00','2024-07-16 02:10:00'),(20,'Slim Wallet','Compact design with RFID protection.','https://www.vascara.com/uploads/cms_productmedia/2024/June/26/tui-deo-vai-y2k-nhan-quai-ban-ca-tinh---sho-0253---mau-den__76826__1719387911-medium.jpg',150000.00,2,'2024-07-16 02:20:00','2024-07-16 02:20:00'),(21,'Leather Wallet','Classic leather wallet with multiple card slots.','https://www.vascara.com/uploads/cms_productmedia/2024/July/1/tui-leather-phoi-khoa-kim-loai---sho-0246---mau-be__76987__1719767596-medium.png',200000.00,2,'2024-07-16 02:30:00','2024-07-16 02:30:00'),(22,'Canvas Tote Bag','Stylish and practical, perfect for everyday use.','https://www.vascara.com/uploads/cms_productmedia/2024/June/26/balo-phong-cach-minimalism---bac-0208---mau-den__76843__1719388423-medium.jpg',350000.00,3,'2024-07-16 02:40:00','2024-07-16 02:40:00'),(23,'Fashion Tote','Elegant design with ample storage space.','https://www.vascara.com/uploads/cms_productmedia/2024/June/26/balo-phong-cach-minimalism---bac-0208---mau-be__76849__1719388651-medium.jpg',400000.00,3,'2024-07-16 02:50:00','2024-07-16 02:50:00'),(24,'Messenger Bag','Comfortable and versatile, suitable for work and casual outings.','https://www.vascara.com/uploads/cms_productmedia/2024/May/28/tui-deo-vai-phom-ru---tot-0164---mau-den__76590__1716868298-medium.jpg',500000.00,4,'2024-07-16 03:00:00','2024-07-16 03:00:00'),(25,'Travel Duffel','Spacious and durable, ideal for short trips.','https://www.vascara.com/uploads/cms_productmedia/2024/May/28/tui-saddle-nap-gap-nhan-khoa-trang-tri---sho-0252---mau-den__76609__1716868876-medium.jpg',650000.00,4,'2024-07-16 03:10:00','2024-07-16 03:10:00'),(26,'Laptop Backpack','Designed for tech-savvy individuals with a padded laptop compartment.','https://www.vascara.com/uploads/cms_productmedia/2024/May/28/tui-satchel-da-bong-nap-gap-ca-tinh---sat-0331---mau-xanh-olive__76615__1716869032-medium.jpg',700000.00,1,'2024-07-16 03:20:00','2024-07-16 03:20:00'),(27,'Outdoor Backpack','Rugged and weather-resistant, perfect for hiking and camping.','https://www.vascara.com/uploads/cms_productmedia/2024/May/28/tui-satchel-da-bong-nap-gap-ca-tinh---sat-0331---mau-den__76621__1716869205-medium.jpg',800000.00,1,'2024-07-16 03:30:00','2024-07-16 03:30:00');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-07-16 16:34:17
+-- Dump completed on 2024-07-18 10:24:41
