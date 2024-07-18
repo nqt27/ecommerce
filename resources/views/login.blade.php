@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> toan
 <!DOCTYPE html>
 <html lang="en">
 
