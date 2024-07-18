@@ -1,16 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN PAGE</title>
-    
+
     <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/page-Admin.css') }}">
@@ -18,7 +18,7 @@
 
 <body class="hold-transition sidebar-mini layout-footer-fixed">
     <div class="wrapper">
-        
+
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -35,49 +35,49 @@
             </ul>
         </nav>
 
-      
-               <!-- Main Sidebar Container -->
+
+        <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-                <a href="{{route('admin')}}" class="brand-link">
-                    <span class="brand-text font-weight-light">Admin</span>
-                </a>
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <li class="nav-item">
-                        <a href="{{route('admin.cate')}}" class="nav-link">
+            <a href="{{route('admin')}}" class="brand-link">
+                <span class="brand-text font-weight-light">Admin</span>
+            </a>
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="{{route('admin.cate')}}" class="nav-link">
                         <p>
                             Category
                         </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('admin.product')}}" class="nav-link">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.product')}}" class="nav-link">
                         <p>
                             Sản phẩm
                         </p>
-                        </a>
-                    </li>
-                </ul>
-            </aside>
+                    </a>
+                </li>
+            </ul>
+        </aside>
 
 
-            <!-- Content Wrapper -->
+        <!-- Content Wrapper -->
         <div class="content-wrapper">
-            
-            <form method="post" action="{{ route('products.store') }}" class = "form-wrapper" enctype="multipart/form-data">
-            @csrf <!-- Thêm CSRF token vào form -->
+
+            <form method="post" action="{{ route('products.store') }}" class="form-wrapper" enctype="multipart/form-data">
+                @csrf <!-- Thêm CSRF token vào form -->
                 <div class="row pb-2 ">
                     <h2 class="text-primary">Create Product</h2>
                     <hr>
                 </div>
                 <div class="mb-3 row">
                     <label class="p-0">Name</label>
-                    <input class="form-control" name="name"/>
+                    <input class="form-control" name="name" />
                 </div>
-                   
-                    
+
+
                 <div class="mb-3 row p-1">
                     <label class="p-0">Price</label>
-                    <input class="form-control" name="price"/>
+                    <input class="form-control" name="price" />
                 </div>
                 <div class="mb-3 row p-1">
                     <label class="p-0">Category ID</label>
@@ -93,10 +93,10 @@
                 </div>
 
                 <div class="mb-3 row p-1">
-                    <label  class="p-0">Image</label>
+                    <label class="p-0">Image</label>
                     <input type="file" class="form-control" name="image">
                 </div>
-                
+
                 <div class="row">
                     <div class="col-6">
                         <button type="submit" class="btn btn-primary form-control">Create</button>
@@ -107,8 +107,8 @@
                 </div>
             </form>
         </div>
-            <!-- /.content-wrapper -->
-        
+        <!-- /.content-wrapper -->
+
 
         <!-- Footer -->
         <footer class="main-footer">
@@ -124,6 +124,5 @@
         <!-- /.control-sidebar -->
     </div>
 </body>
-</html>
 
-   
+</html>

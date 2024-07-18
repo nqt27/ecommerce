@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Hash;
+
 class RegisterController extends Controller
 {
     public function index()
@@ -20,7 +22,7 @@ class RegisterController extends Controller
         $user = new User;
         $user->name = $request->input('username');
         $user->email = $request->input('email');
-        $user->password = $request->input('password');
+        $user->password = Hash::make($request->input('password'));
         $user->save();
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
         return redirect()->route('home')->with('success', 'Product added successfully.');
