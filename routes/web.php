@@ -55,8 +55,10 @@ Route::get('/admin/addProduct', function (ProductController $productController) 
 })->name('admin.addProduct');
 Route::post('/admin/Product', [ProductController::class, 'store'])->name('products.store');
 
-
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+});
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

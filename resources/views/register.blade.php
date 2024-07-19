@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
     <!-- bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <title>Register</title>
@@ -46,9 +45,6 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-light w-100 fs-6"><i class="bi bi-google me-2"
-                            style="width:25px;"></i><small>Sign Up with Google</small></button>
-                    <button class="btn btn-lg btn-light w-100 fs-6"><i class="bi bi-google me-2" style="width:25px;"></i><small>Sign Up with Google</small></button>
 
                     <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Sign Up</button>
                 </div>
@@ -57,23 +53,11 @@
 
                 </div>
                 <div class="row">
-                    <small>You have account? <a href="">Login</a></small>
-                </div>
-
-                <div class="row">
-                    <small>You have account? <a href="{{route('Auth.login')}}">Login</a></small>
+                    <small>You have account? <a href="{{route('login')}}">Login</a></small>
 
                 </div>
+            </form>
 
-            </div>
-        </div>
-    </div>
-
-          </div>
-       </div> 
-      </div>
-    </div>
 </body>
 
-</html>
 </html>

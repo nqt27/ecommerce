@@ -25,6 +25,6 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->input('password'));
         $user->save();
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
-        return redirect()->route('home')->with('success', 'Product added successfully.');
+        return redirect()->route('login')->with('success', 'Product added successfully.');
     }
 }
