@@ -4,19 +4,24 @@
         <span>|</span>
         <a href="#"><span>Subcribe</span></a>
         @auth
-        <p>Welcome, {{ Auth::user()->name }}!</p>
+        <p class="name-user">Welcome, {{ Auth::user()->name }}!</p>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
 
-        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <i class="bi bi-person-circle" style="color:white;transform: translateX(400px);"></i>
+        <a href="{{ route('logout') }}"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
             Logout
         </a>
         @endauth
 
         <!-- Kiểm tra người dùng chưa đăng nhập -->
         @guest
-        <p> <a href="{{ route('login') }}">login</a> | <a href="{{ route('register') }}">signup</a></p>
+        <p class="auth">
+            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}"
+                class="signup">Signup</a>
+        </p>
         @endguest
     </div>
     <div class="container">
@@ -36,11 +41,21 @@
             </div>
             <div class="right-header">
                 <div class="search">
-                    <img src="{{ asset('image/research.png') }}" alt="">
-                    <span>SEARCH</span>
+                    <div class="input-group input-group-sm mb-10">
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-sm">
+                            <i class="bi bi-search input-group-text" style="font-size: 20px;"></i>
+                    </div>
                 </div>
                 <div class="cart">
-                    <img src="{{ asset('image/shopping-bag.png') }}" alt="">
+                    <a class="nav-link" data-toggle="dropdown" href="{{route('cart.index')}}">
+                        <i class="bi bi-bag-fill" style="font-size: 30px;"></i>
+                        <span class="badge badge-danger navbar-badge" style="font-size:10px; 
+                                height: 15px; 
+                                margin-left: -5px; 
+                                margin-top:3px;">
+                            3</span>
+                    </a>
                 </div>
             </div>
         </div>

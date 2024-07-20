@@ -5,62 +5,7 @@ body {
 
 
 
-.top-header {
-    display: flex;
-    background-color: #493e3c;
-    justify-content: center;
-    align-items: center;
-}
 
-.top-header * {
-    color: white;
-    margin: 1%;
-}
-
-.top-header marquee {
-    width: 10%;
-}
-
-.navbar a {
-    text-decoration: none;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #f8f8f8; /* Footer background color */
-    padding: 20px 0; /* Top and bottom padding */
-    font-size: 0.9em; /* Smaller font size */
-}
-
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-footer .footer-left,
-footer .footer-center,
-footer .footer-right {
-    flex: 1;
-    margin: 0 30px;
-}
-
-.footer-left > div {
-    padding: 10px;
-}
-
-.social {
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.social i {
-    font-size: 30px;
-}
 
 /* Product Styles */
 .product {
