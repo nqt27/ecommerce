@@ -26,6 +26,9 @@ Route::get('/home-product', function (CategoryController $categoryController, Pr
     return app(HomeProductController::class)->index($categories, $products);
 })->name('home-product');
 
+
+Route::get('/home-product/{id}', [ProductController::class, 'show'])->name('products.show');
+
 Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
     $categories = $categoryController->index();
     $products = $productController->index();

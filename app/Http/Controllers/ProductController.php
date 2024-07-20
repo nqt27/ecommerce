@@ -1,10 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 
 use Illuminate\Routing\Controller;
-use Illuminate\Http\Request; 
-use App\Models\Product; 
+use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -34,5 +35,14 @@ class ProductController extends Controller
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
         return redirect()->route('admin')->with('success', 'Product added successfully.');
     }
-}
+    public function show($id)
+    {
+        $product = Product::where('id', $id)->first();
 
+        if (!$product) {
+            return redirect()->back()->with('error', 'Product not found.');
+        }
+
+        return view('home-page.product-detail', ['product' => $product, 'products' => Product::take(4)->get()]);
+    }
+}
