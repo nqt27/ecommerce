@@ -80,7 +80,7 @@
             <a href="#">{{$p->name}}</a>
           </span>
           <span class="item-price">
-          {{$p->price}}
+            {{$p->price}}
           </span>
         </div>
         @endforeach

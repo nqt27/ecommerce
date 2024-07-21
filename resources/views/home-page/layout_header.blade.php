@@ -10,8 +10,7 @@
         </form>
 
         <i class="bi bi-person-circle" style="color:white;transform: translateX(400px);"></i>
-        <a href="{{ route('logout') }}"
-            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
+        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
             Logout
         </a>
         @endauth
@@ -19,8 +18,7 @@
         <!-- Kiểm tra người dùng chưa đăng nhập -->
         @guest
         <p class="auth">
-            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}"
-                class="signup">Signup</a>
+            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}" class="signup">Signup</a>
         </p>
         @endguest
     </div>
@@ -42,9 +40,8 @@
             <div class="right-header">
                 <div class="search">
                     <div class="input-group input-group-sm mb-10">
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-sm">
-                            <i class="bi bi-search input-group-text" style="font-size: 20px;"></i>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        <i class="bi bi-search input-group-text" style="font-size: 20px;"></i>
                     </div>
                 </div>
                 <div class="cart">
@@ -54,7 +51,7 @@
                                 height: 15px; 
                                 margin-left: -5px; 
                                 margin-top:3px;">
-                            3</span>
+                        </span>
                     </a>
                 </div>
             </div>
