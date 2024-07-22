@@ -77,7 +77,7 @@
                     <div class="line">
                         <div></div>
                     </div>
-                    <a href="#">MORE <span>>></span></a>
+                    <a href="#">MORE<span>>></span></a>
                 </div>
                 <div class="product-content">
                     @php
@@ -92,8 +92,8 @@
                                             <img src="{{ asset($p->image) }}" alt="">
                                         </div>
                                         <div class="cost-name">
-                                            <p>{{$p->name}}</p>
-                                            <p>{{$p->price}} VND</p>
+                                            <span>{{$p->name}}</span>
+                                            <span>{{$p->price}} VND</span>
                                         </div>
                                     </div>
                                 </a>

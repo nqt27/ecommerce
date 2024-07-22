@@ -9,7 +9,7 @@
             @csrf
         </form>
 
-        <i class="bi bi-person-circle" style="color:white;transform: translateX(400px);"></i>
+        <i id="icon-user" class="bi bi-person-circle" style="color:white;transform: translateX(400px);"></i>
         <a href="{{ route('logout') }}"
             onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
             Logout

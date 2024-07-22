@@ -14,3 +14,15 @@
 .content img {
     width: 30%;
 }
+
+
+.form-wrapper{
+    width: 100% !important;
+}
+.content{
+    margin-left: 260px !important;
+}
+#head-content{
+    display: flex !important;
+    justify-content: space-between;
+}

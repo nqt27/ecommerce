@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{assset('css/detail.css')}}">
+    <link rel="stylesheet" href="{{asset('css/product-detail.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -19,7 +19,7 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="d-block w-100" alt="...">
-                  </div>
+                  </div>P
                   <div class="carousel-item">
                     <img src="https://dongphuc.aristino.com/wp-content/uploads/2024/05/IMG_8222-2048x2048.webp" class="d-block w-100" alt="...">
                   </div>

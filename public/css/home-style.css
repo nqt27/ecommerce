@@ -224,3 +224,42 @@ body {
     background-color: #493e3c;
     color: white;
 }
+
+@media (max-width: 430px){
+    .cate-item{
+        font-size: 10px;
+    }
+    .cate-item i{
+        font-size: 20px !important;
+    }
+    .product-title p, a, span{
+        font-size: 10px !important;
+    }
+    .product-title p{
+        margin-top: 10px !important;
+    }
+    .product-content{
+        margin-bottom: 30px !important;
+    }
+    .product-content .product-item{
+        width: 80px;
+        height: 130px;
+    }
+
+    .product-item img{
+        width: 80px;
+        height: 80px;
+    }
+    .product-item .cost-name{
+        margin-left: -30px !important;
+        width: 100px    !important;
+    }
+    
+    .product-item .cost-name span{
+        font-size : 7px !important; 
+        
+    }
+
+
+
+}
