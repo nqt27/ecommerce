@@ -33,7 +33,7 @@ class ProductController extends Controller
         $product->category_id = $request->input('category_id');
         $product->save();
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
-        return redirect()->route('admin')->with('success', 'Product added successfully.');
+        return redirect()->route('admin.product')->with('success', 'Product added successfully.');
     }
     public function destroy($id)
     {
