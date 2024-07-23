@@ -7,7 +7,8 @@
     <title>ADMIN PAGE</title>
 
     <!-- Fonts and Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="~/img/favicon.ico" rel="icon">
@@ -45,12 +46,6 @@
 
 
     <table class="table">
-        <div class="p-3" id="head-content">
-            <h2>PRODUCTS</h2>
-            <a href="{{route('admin.addProduct')}}" class="btn btn-primary">
-                <i class="bi bi-plus-circle-fill"></i> Create Product
-            </a>
-        </div>
         <thead>
             <tr>
                 <th>ID</th>
@@ -60,28 +55,39 @@
                 <th scope="col">Price</th>
                 <th scope="col">Category</th>
                 <th scope="col">Manage</th>
-
             </tr>
         </thead>
         <tbody>
             @foreach($products as $p)
             <tr>
                 <td scope="row">{{$p->id}}</td>
-                <td>{{$p->name}}</td>
-                <td>{!! $p->description !!}</td>
-                <td><img src="{{ asset($p->image) }}" alt=""></td>
-                <td>{{$p->price}}</td>
-                <td>{{$p->category_id}}</td>
-
-                <td>
-                    <a href="#" class="btn btn-warning btn-sm mt-3">
+                <td class="view-mode">{{$p->name}}</td>
+                <td class="view-mode">{!! $p->description !!}</td>
+                <td class="view-mode"><img src="{{ asset($p->image) }}" alt=""></td>
+                <td class="view-mode">{{$p->price}}</td>
+                <td class="view-mode">{{$p->category_id}}</td>
+                <td class="view-mode">
+                    <a href="#" class="btn btn-warning btn-sm mt-3 edit-btn">
                         <i class="bi bi-pencil-square"></i> Edit
                     </a>
-                    <form action="{{ route('products.destroy', $p->id) }}" method="POST">
+                    <form action="{{ route('products.destroy', $p->id) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger btn-sm mt-3" type="submit"><i class="bi bi-trash"></i>Delete</button>
+                        <button class="btn btn-danger btn-sm mt-3" type="submit"><i class="bi bi-trash"></i>
+                            Delete</button>
                     </form>
+                </td>
+            </tr>
+            <tr class="edit-row" style="display:none;">
+                <td scope="row">{{$p->id}}</td>
+                <td><input type="text" class="form-control" value="{{$p->name}}"></td>
+                <td><input type="text" class="form-control" value="{!! $p->description !!}"></td>
+                <td><input type="file" class="form-control"></td>
+                <td><input type="number" class="form-control" value="{{$p->price}}"></td>
+                <td><input type="number" class="form-control" value="{{$p->category_id}}"></td>
+                <td>
+                    <button class="btn btn-success btn-sm mt-3 save-btn"><i class="bi bi-save"></i> Save</button>
+                    <button class="btn btn-secondary btn-sm mt-3 cancel-btn"><i class="bi bi-x"></i> Cancel</button>
                 </td>
             </tr>
             @endforeach
@@ -90,9 +96,9 @@
 
 
 
-
-
     @include('admin.layout-footer')
+    <script src="{{asset('js/inlineEdit.js')}}"></script>
+
 </body>
 
 </html>
