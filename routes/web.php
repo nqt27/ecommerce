@@ -57,6 +57,7 @@ Route::get('/admin/addProduct', function (ProductController $productController) 
     return app(AdminController::class)->addProduct($products);
 })->name('admin.addProduct');
 Route::post('/admin/Product', [ProductController::class, 'store'])->name('products.store');
+Route::delete('/admin/Product/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');

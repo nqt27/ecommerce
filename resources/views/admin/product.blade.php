@@ -7,8 +7,7 @@
     <title>ADMIN PAGE</title>
 
     <!-- Fonts and Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="~/img/favicon.ico" rel="icon">
@@ -73,16 +72,20 @@
                 <td><img src="{{ asset($p->image) }}" alt=""></td>
                 <td>{{$p->price}}</td>
                 <td>{{$p->category_id}}</td>
-           
-            <td>
-                <a href="#" class="btn btn-warning btn-sm mt-3">
-                    <i class="bi bi-pencil-square"></i> Edit
-                </a>
 
-                <a href="#" class="btn btn-danger btn-sm mt-3">
-                    <i class="bi bi-trash"></i> Delete
-                </a>
-            </td>
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm mt-3">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <form action="{{ route('products.destroy', $p->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
+                    <a href="#" class="btn btn-danger btn-sm mt-3">
+                        <i class="bi bi-trash"></i> Delete
+                    </a>
+                </td>
             </tr>
             @endforeach
         </tbody>

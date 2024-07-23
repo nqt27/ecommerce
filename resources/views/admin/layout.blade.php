@@ -27,7 +27,7 @@
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div class="ms-4">
-                <b class="mb-0">Thành Đạt</b>
+                <!-- <b class="mb-0">Thành Đạt</b> -->
                 <span>Admin</span>
             </div>
         </div>
@@ -61,8 +61,8 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="{{route('register')}}" class="dropdown-item">Sign In</a>
-                    <a href="{{route('login')}}" class="dropdown-item">Sign Up</a>
+                    <a href="{{route('register')}}" class="dropdown-item">Đăng ký</a>
+                    <a href="{{route('login')}}" class="dropdown-item">Đăng nhập</a>
                     <a href="#" class="dropdown-item">404 Error</a>
                     <a href="#" class="dropdown-item">Blank Page</a>
                 </div>
@@ -78,12 +78,12 @@
         <a asp-controller="Home" asp-action="Index" class="navbar-brand d-flex d-lg-none me-4">
             <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
         </a>
-        <a href="#" class="sidebar-toggler flex-shrink-0">
+        <!-- <a href="#" class="sidebar-toggler flex-shrink-0">
             <i class="fa fa-bars"></i>
         </a>
         <form class="d-none d-md-flex ms-4">
             <input class="form-control border-0" type="search" placeholder="Search">
-        </form>
+        </form> -->
         <div class="navbar-nav align-items-center ms-auto">
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">

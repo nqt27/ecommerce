@@ -35,6 +35,16 @@ class ProductController extends Controller
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
         return redirect()->route('admin')->with('success', 'Product added successfully.');
     }
+    public function destroy($id)
+    {
+        // Tìm sản phẩm bằng ID
+        $product = Product::where('id', $id)->first();
+        // Xóa sản phẩm
+        $product->delete();
+
+        // Redirect lại trang danh sách sản phẩm với thông báo thành công
+        return redirect()->route('admin.product')->with('success', 'Product deleted successfully.');
+    }
     public function show($id)
     {
         $product = Product::where('id', $id)->first();
