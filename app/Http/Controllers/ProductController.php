@@ -55,4 +55,25 @@ class ProductController extends Controller
 
         return view('home-page.product-detail', ['product' => $product, 'products' => Product::take(4)->get()]);
     }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric',
+            // Thêm các rules khác nếu cần
+        ]);
+        $path = 'storage/' . $request->file('image')->store('image', 'public');
+
+        $product = Product::findOrFail($id);
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->price = $request->input('price');
+        $product->image = $path;
+        // Cập nhật các trường khác nếu cần
+
+        $product->save();
+
+        return redirect()->route('admin.product')->with('success', 'Product updated successfully.');
+    }
 }
