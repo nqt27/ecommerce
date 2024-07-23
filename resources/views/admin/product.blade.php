@@ -80,11 +80,8 @@
                     <form action="{{ route('products.destroy', $p->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Delete</button>
+                        <button class="btn btn-danger btn-sm mt-3" type="submit"><i class="bi bi-trash"></i>Delete</button>
                     </form>
-                    <a href="#" class="btn btn-danger btn-sm mt-3">
-                        <i class="bi bi-trash"></i> Delete
-                    </a>
                 </td>
             </tr>
             @endforeach
