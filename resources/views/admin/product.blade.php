@@ -79,18 +79,25 @@
                 </td>
             </tr>
             <tr class="edit-row" style="display:none;">
-                <td scope="row">{{$p->id}}</td>
-                <td><input type="text" class="form-control" value="{{$p->name}}"></td>
-                <td><input type="text" class="form-control" value="{!! $p->description !!}"></td>
-                <td><input type="file" class="form-control"></td>
-                <td><input type="number" class="form-control" value="{{$p->price}}"></td>
-                <td><input type="number" class="form-control" value="{{$p->category_id}}"></td>
-                <td>
-                    <button class="btn btn-success btn-sm mt-3 save-btn"><i class="bi bi-save"></i> Save</button>
-                    <button class="btn btn-secondary btn-sm mt-3 cancel-btn"><i class="bi bi-x"></i> Cancel</button>
-                </td>
+                <form action="{{ route('products.update', $p->id) }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <td scope="row">{{$p->id}}</td>
+                    <td><input name="name" type="text" class="form-control" value="{{$p->name}}"></td>
+                    <td><input  name="description" type="text" class="form-control" value="{!! $p->description !!}"></td>
+                    <td><input name="image"  type="file" class="form-control" value="{{$p->image}}"></td>
+                    <td><input name="price" type="number" class="form-control" value="{{$p->price}}"></td>
+                    <td><input name="category_id" type="text" class="form-control" value="{{$p->category_id}}"></td>
+                    <td>
+                        <button class="btn btn-success btn-sm mt-3 save-btn" type="submit"><i class="bi bi-save"></i> Save</button>
+                        <a class="btn btn-secondary btn-sm mt-3 cancel-btn"><i class="bi bi-x"></i> Cancel</a>
+                    </td>
+
+                </form>
+
             </tr>
             @endforeach
+
         </tbody>
     </table>
 
