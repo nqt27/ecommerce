@@ -10,7 +10,9 @@ document.querySelectorAll('.edit-btn').forEach(button => {
 
 
 
-document.querySelectorAll('.save-btn').forEach(button => {
+
+
+document.querySelectorAll('.cancel-btn').forEach(button => {
     button.addEventListener('click', function() {
         const editRow = this.closest('tr');
         const viewRow = editRow.previousElementSibling;

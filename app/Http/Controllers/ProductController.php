@@ -63,7 +63,8 @@ class ProductController extends Controller
             'price' => 'required|numeric',
             // Thêm các rules khác nếu cần
         ]);
-        $path = 'storage/' . $request->file('image')->store('image', 'public');
+       
+         $path = 'storage/' . $request->file('image')->store('image', 'public');
 
         $product = Product::findOrFail($id);
         $product->name = $request->input('name');
