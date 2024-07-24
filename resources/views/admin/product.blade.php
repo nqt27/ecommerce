@@ -83,7 +83,7 @@
                     @method('PUT')
                     <td scope="row">{{$p->id}}</td>
                     <td><input name="name" type="text" class="form-control" value="{{$p->name}}"></td>
-                    <td><input name="description" type="text" class="form-control" value="{!! $p->description !!}"></td>
+                    <td><input name="description" type="textarea" class="form-control" value="{!! $p->description !!}"></td>
                     <td><input name="image" type="file" class="form-control" value="{{$p->image}}"></td>
                     <td><input name="price" type="number" class="form-control" value="{{$p->price}}"></td>
                     <td><input name="category_id" type="text" class="form-control" value="{{$p->category_id}}"></td>

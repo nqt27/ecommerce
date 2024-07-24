@@ -1,12 +1,12 @@
 <style>
-    html{
-        height:100%;
+    html {
+        height: 100%;
         margin: 0;
     }
 
-    body{
-        display:flex;
-        flex-direction:column;
+    body {
+        display: flex;
+        flex-direction: column;
     }
 
     footer {
@@ -20,7 +20,7 @@
 
 <div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-light navbar-light">
-       
+
         <div class="d-flex align-items-center ms-4 mb-4">
             <div class="position-relative">
                 <img class="rounded-circle" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeHVNdmcFCrz9QE8hHY1CELTso2H55p0AlGyjYfnmnQCUTxXwqfQ2nEzHEdYm5EACymgn4wiXF-uAAnsra76pg9d&_nc_ohc=rWGVPdTzi14Q7kNvgEzj1bi&_nc_ht=scontent.fsgn5-2.fna&oh=00_AYAlmouZwOBBzkemruSPfGF0Iwzg-MwVikhDDdXyLyu8jg&oe=66C5FFF8" alt="Ảnh của admin" style="width: 40px; height: 40px;">
@@ -42,7 +42,7 @@
                     <a href="{{route('admin.product')}}" class="dropdown-item">
                         <i class="bi bi-cart4"></i> Products
                     </a>
-                    <a href="#"class="dropdown-item">
+                    <a href="#" class="dropdown-item">
                         <i class="bi bi-box"></i> Orders
                     </a>
                     <a href="#" class="dropdown-item">
@@ -54,7 +54,7 @@
                     <a asp-controller="User" asp-action="Index" class="dropdown-item">User</a>
                 </div>
             </div>
-            <a href="{{route('admin.addProduct')}}"class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Product</a>
+            <a href="{{route('admin.addProduct')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Product</a>
             <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
             <a href="#" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
             <a href="#" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
@@ -149,15 +149,22 @@
                 </div>
             </div>
             <div class="nav-item dropdown">
+                @auth
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                     <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                    <span class="d-none d-lg-inline-flex">John Doe</span>
+                    <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                     <a href="#" class="dropdown-item">My Profile</a>
                     <a href="#" class="dropdown-item">Settings</a>
-                    <a href="#" class="dropdown-item">Log Out</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item logout">
+                        Logout
+                    </a>
                 </div>
+                @endauth
             </div>
         </div>
     </nav>
