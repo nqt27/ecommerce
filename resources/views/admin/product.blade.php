@@ -7,8 +7,7 @@
     <title>ADMIN PAGE</title>
 
     <!-- Fonts and Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="~/img/favicon.ico" rel="icon">
@@ -84,8 +83,8 @@
                     @method('PUT')
                     <td scope="row">{{$p->id}}</td>
                     <td><input name="name" type="text" class="form-control" value="{{$p->name}}"></td>
-                    <td><input  name="description" type="text" class="form-control" value="{!! $p->description !!}"></td>
-                    <td><input name="image"  type="file" class="form-control" value="{{$p->image}}"></td>
+                    <td><input name="description" type="text" class="form-control" value="{!! $p->description !!}"></td>
+                    <td><input name="image" type="file" class="form-control" value="{{$p->image}}"></td>
                     <td><input name="price" type="number" class="form-control" value="{{$p->price}}"></td>
                     <td><input name="category_id" type="text" class="form-control" value="{{$p->category_id}}"></td>
                     <td>
