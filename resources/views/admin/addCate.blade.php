@@ -47,7 +47,7 @@
             <h4 class="text-primary">Create New Category</h4>
             <div class="row mt-3">
                 <label for="category_name">Category Name</label>
-                <input name="category_name" type="text" class="form-control" id="category_name" />
+                <input name="name" type="text" class="form-control" id="category_name" />
                 @error('category_name')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
