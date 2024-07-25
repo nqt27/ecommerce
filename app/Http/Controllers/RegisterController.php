@@ -20,9 +20,10 @@ class RegisterController extends Controller
             'username' => 'required|string|max:255'
         ]);
         $user = new User;
-        $user->name = $request->input('username');
+        $user->username = $request->input('username');
         $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
+        $user->role = 'user';
         $user->save();
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
         return redirect()->route('login')->with('success', 'Product added successfully.');

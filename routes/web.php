@@ -29,39 +29,40 @@ Route::get('/home-product', function (CategoryController $categoryController, Pr
 
 Route::get('/home-product/{id}', [ProductController::class, 'show'])->name('products.show');
 
-Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
-    $categories = $categoryController->index();
-    $products = $productController->index();
 
-    return app(AdminController::class)->index($categories, $products);
-})->name('admin');
-
-Route::get('/admin/category', function (CategoryController $categoryController) {
-    $categories = $categoryController->index();
-    return app(AdminController::class)->category($categories);
-})->name('admin.cate');
-
-Route::get('/admin/product', function (ProductController $productController) {
-    $products = $productController->index();
-    return app(AdminController::class)->product($products);
-})->name('admin.product');
-
-Route::get('/admin/addCate', function (CategoryController $categoryController) {
-    $categories = $categoryController->index();
-    return app(AdminController::class)->addCategory($categories);
-})->name('admin.addCate');
-Route::post('/admin/addCate', [CategoryController::class, 'store'])->name('categories.store');
-
-Route::get('/admin/addProduct', function (ProductController $productController) {
-    $products = $productController->index();
-    return app(AdminController::class)->addProduct($products);
-})->name('admin.addProduct');
-Route::post('/admin/Product', [ProductController::class, 'store'])->name('products.store');
-Route::delete('/admin/Product/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
-Route::put('/admin/Product/{id}', [ProductController::class, 'update'])->name('products.update');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::get('/admin', function (CategoryController $categoryController, ProductController $productController) {
+        $categories = $categoryController->index();
+        $products = $productController->index();
+
+        return app(AdminController::class)->index($categories, $products);
+    })->name('admin');
+
+    Route::get('/admin/category', function (CategoryController $categoryController) {
+        $categories = $categoryController->index();
+        return app(AdminController::class)->category($categories);
+    })->name('admin.cate');
+
+    Route::get('/admin/product', function (ProductController $productController) {
+        $products = $productController->index();
+        return app(AdminController::class)->product($products);
+    })->name('admin.product');
+
+    Route::get('/admin/addCate', function (CategoryController $categoryController) {
+        $categories = $categoryController->index();
+        return app(AdminController::class)->addCategory($categories);
+    })->name('admin.addCate');
+    Route::post('/admin/addCate', [CategoryController::class, 'store'])->name('categories.store');
+
+    Route::get('/admin/addProduct', function (ProductController $productController) {
+        $products = $productController->index();
+        return app(AdminController::class)->addProduct($products);
+    })->name('admin.addProduct');
+    Route::post('/admin/Product', [ProductController::class, 'store'])->name('products.store');
+    Route::delete('/admin/Product/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+    Route::put('/admin/Product/{id}', [ProductController::class, 'update'])->name('products.update');
 });
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 

@@ -63,14 +63,21 @@ class ProductController extends Controller
             'price' => 'required|numeric',
             // Thêm các rules khác nếu cần
         ]);
-       
-         $path = 'storage/' . $request->file('image')->store('image', 'public');
 
         $product = Product::findOrFail($id);
+        if ($request->hasFile('image')) {
+            // Store the new image
+            $path = 'storage/' . $request->file('image')->store('image', 'public');
+
+            // Update the image path in the database
+            $product->image = $path;
+        }
+
+
         $product->name = $request->input('name');
         $product->description = $request->input('description');
         $product->price = $request->input('price');
-        $product->image = $path;
+        // $product->image = $path;
         // Cập nhật các trường khác nếu cần
 
         $product->save();

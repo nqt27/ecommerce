@@ -32,7 +32,7 @@
                         <p>We are happy to have you back.</p>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username" name="name">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="username" name="username">
                     </div>
                     <div class="input-group mb-1">
                         <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" name="password">
@@ -54,7 +54,7 @@
                         <button class="btn btn-lg btn-light w-100 fs-6"><i class="bi bi-google me-2" style="width:25px;"></i><small>Sign In with Google</small></button>
                     </div>
                     <div class="row">
-                        <small>Don't have account? <a href="">Sign Up</a></small>
+                        <small>Don't have account? <a href="{{route('register')}}">Sign Up</a></small>
                     </div>
                 </div>
         </div>
