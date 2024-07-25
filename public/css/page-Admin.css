@@ -26,3 +26,46 @@
     display: flex !important;
     justify-content: space-between;
 }
+#box-group button{
+    width: 250px !important;
+}
+#box-group a{
+    width: 250px !important;
+}
+ #nav-menu {
+        display: none;
+    }
+
+@media (max-width : 430px){
+
+   
+    #nav-menu {
+        display: none; 
+        gap: 10px; 
+    }
+
+    #nav-menu.show {
+        display: grid !important; 
+    }
+
+    .navbar-nav .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px; 
+    }
+
+    .navbar-nav .nav-item a {
+        width: 100%; 
+    }
+
+    .content{
+        margin-left : 0 !important;
+    }
+
+   #box-group button{
+        width: 170px !important;
+   }
+   #box-group a{
+         width: 170px !important;
+    }
+}

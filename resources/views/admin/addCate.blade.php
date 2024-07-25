@@ -53,18 +53,19 @@
                 @enderror
             </div>
             <div class="row mt-3">
-                <label for="description">Description</label>
-                <input name="description" type="text" class="form-control" id="description" />
-                @error('description')
+                <label for="image">Image</label>
+                <input name="image" type="file" class="form-control" id="image" />
+                @error('image')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <div class="row mt-3">
+            
+            <div class="row mt-3" id = "box-group">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary" style="width:250px">Create</button>
+                    <button type="submit" class="btn btn-primary" >Create</button>
                 </div>
                 <div class="col-6">
-                    <a href="{{ route('admin.cate') }}" class="btn btn-secondary" style="width:250px">
+                    <a href="{{ route('admin.cate') }}" class="btn btn-secondary" >
                         <i class="bi bi-arrow-return-left"></i> Back to List
                     </a>
                 </div>

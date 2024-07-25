@@ -39,46 +39,45 @@
 
 <body class="hold-transition sidebar-mini layout-footer-fixed">
     @include('admin.layout')
-        <!-- Content Wrapper -->
+    <!-- Content Wrapper -->
 
-            <form method="post" action="{{ route('products.store') }}" class="form-wrapper"
-                enctype="multipart/form-data">
-                @csrf
-                <!-- Thêm CSRF token vào form -->
-                <div class="row pb-2 "> 
-                    <h2 class="text-primary">Create Product</h2>
-                    <hr>
-                </div>
-                <div class="mb-3 row">
-                    <label class="p-0">Name</label>
-                    <input class="form-control" name="name" />
-                </div>
+    <form method="post" action="{{ route('products.store') }}" class="form-wrapper" enctype="multipart/form-data"
+        style=" width : 50% !important; ">
+        @csrf
+        <!-- Thêm CSRF token vào form -->
+        <div class="row pb-2 ">
+            <h2 class="text-primary">Create Product</h2>
+            <hr>
+        </div>
+        <div class="mb-3 row">
+            <label class="p-0">Name</label>
+            <input class="form-control" name="name" />
+        </div>
 
 
-                <div class="mb-3 row p-1">
-                    <label class="p-0">Price</label>
-                    <input class="form-control" name="price" />
-                </div>
-                <div class="mb-3 row p-1">
-                    <label class="p-0">Category ID</label>
-                    <select name="category_id" class="form-control">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0">Price</label>
+            <input class="form-control" name="price" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0">Category ID</label>
+            <select name="category_id" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
 
-                <div class="mb-3 row ">
-                    <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="description"></textarea>
-                </div>
+        <div class="mb-3 row ">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+        </div>
 
-                <div class="mb-3 row p-1">
-                    <label class="p-0">Image</label>
-                    <input type="file" class="form-control" name="image">
-                </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0">Image</label>
+            <input type="file" class="form-control" name="image">
+        </div>
 
-                <div class="row">
+        <div class="row">
             <div class="col-6 mt-3">
                 <button type="submit" class="btn btn-primary" style="width: 200px">
                     <i class="bi bi-plus-circle-fill"></i> Create New Product
@@ -90,10 +89,10 @@
                 </a>
             </div>
         </div>
-            </form>
-        </div>
-      
-                    @include('admin.layout-footer')
+    </form>
+    </div>
+
+    @include('admin.layout-footer')
 
     </div>
 </body>

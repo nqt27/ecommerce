@@ -19,7 +19,8 @@
         <!-- Kiểm tra người dùng chưa đăng nhập -->
         @guest
         <p class="auth">
-            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}" class="signup">Signup</a>
+            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}"
+                class="signup">Signup</a>
         </p>
         @endguest
     </div>
@@ -40,9 +41,9 @@
             </div>
             <div class="right-header">
                 <div class="search">
-                    <div class="input-group input-group-sm mb-10">
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                        <i class="bi bi-search input-group-text" style="font-size: 20px;"></i>
+                    <div class="icon"></div>
+                    <div class="input">
+                        <input type="text" placeholder="Search" id="mysearch">
                     </div>
                 </div>
                 <div class="cart">

@@ -55,7 +55,6 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Image</th>
-                <th>Role</th>
                 <th>Manage</th>
 
             </tr>
@@ -68,7 +67,6 @@
                 <td>{{$c->id}}</td>
                 <td>{{$c->name}}</td>
                 <td>{!! $c->image !!}</td>
-                <td>{{$c->role}}</td>
 
 
                 <td>
