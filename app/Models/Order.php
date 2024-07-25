@@ -14,4 +14,16 @@ class Order extends Model
         'total_amount',
         'status'
     ];
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function order_item()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
 }

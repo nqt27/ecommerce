@@ -11,10 +11,22 @@ class Product extends Model
     protected $table = 'products';
     protected $fillable = [
         'name',
-        'description',
-        'image',
-        'price',
-        'stock',
-        'category_id'
+        'image'
     ];
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    public function order_item()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+    public function cart_item()
+    {
+        return $this->hasMany(CartItem::class);
+    }
 }

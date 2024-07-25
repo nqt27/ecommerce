@@ -21,7 +21,7 @@ class User extends Authenticatable
         'username',
         'email',
         'role',
-        'phone', 
+        'phone',
         'address',
         'avatar'
     ];
@@ -29,4 +29,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password'
     ];
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+    public function carts()
+    {
+        return $this->hasOne(Cart::class);
+    }
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('email');
-            $table->string('password'); // Dùng string để tạo cột email
+            $table->string('password');
             $table->string('role');
             $table->string('phone');
             $table->string('address');
