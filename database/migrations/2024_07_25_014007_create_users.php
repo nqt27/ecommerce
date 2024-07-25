@@ -16,8 +16,13 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('email'); // Dùng string để tạo cột email
-            $table->string('password');
+            $table->string('email');
+            $table->string('password'); // Dùng string để tạo cột email
+            $table->string('role');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('avatar');
+
             $table->timestamps();
         });
     }
