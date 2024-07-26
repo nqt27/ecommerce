@@ -13,9 +13,39 @@
 .top-header marquee {
     width: 10%;
 }
+.main-header{
+    justify-content: space-between;
+}
 
-.navbar a {
-    text-decoration: none;
+.navbar ul{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 15px;
+    font-family: 'GothicA1-SemiBold';
+    color: #000000;
+    margin: 0px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    border-radius: 0px;
+}
+.navbar ul li{
+        list-style-type: none;
+
+}
+.navbar ul li ul{
+    display: none;
+}
+.navbar ul li:hover > ul {
+    display: block;
 }
 
 .nav-link {
@@ -155,80 +185,73 @@ footer .footer-right {
     
     }
 
-@media (max-width: 430px) {
-    .top-header{
-        font-size: 10px;
-    }
-    .auth, .logout, .name-user {
-        margin-left: 200px;
-        display: flex;
-        transform: none; /* Remove transform property */
-    }
-    
-    .auth a, .logout {
-        color: white !important;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .main-header{
-        display: grid;
-        text-align: center;
-    }
-    .main-header .navbar a{
-        font-size: 7px !important;
-    }
-    .main-header .navbar ul li {
-        margin: 12% !important;
-    }
-    .navbar{
-        height: 1px;
-        text-align: center;   
-    }
-    .navbar ul{
-        height: 1px;
-        width: 400px;
-    }
-    .logo{
-        margin-top: -20px;
-        margin-left: 200px;
-
-    }
-
-    .logo img{
-        width: 100px;
-        height: auto;
-    }
-    .cart{
-        position: absolute;
-        margin-top: -30px !important;
-        margin-right: -550px !important;
-
-    }
-    .cart i{
-        font-size: 15px !important;
-    }
-    .cart span{
-       font-size: 7px !important;
-       height: 9px !important; 
-       background-color: blueviolet;
-    }
-
-    .search {
-        left: 180px;
-        top: 5px;
-        width: 100px !important;
-        height: 15px !important;
-        position: relative;
-        transform: translateX(100px);
-        background: #fff;
-        border-radius: 60px;
-        transition: 0.5s;
-        box-shadow: 0 0 0 1px #493e3c;
-        overflow: hidden;
+    @media (max-width: 430px) {
+        .top-header{
+            font-size: 10px;
+        }
+        .auth, .logout, .name-user {
+            margin-left: 200px;
+            display: flex;
+            transform: none;
         }
         
-        
-        
+        .auth a, .logout {
+            color: white !important;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .main-header{
+            display: grid;
+            text-align: center;
+        }
+        .main-header .navbar a{
+            font-size: 7px !important;
+        }
+        .main-header .navbar ul li {
+            margin: 12% !important;
+        }
+        .navbar ul{ 
+            display: none;
+        }
+        .logo{
+            margin-top: -20px;
+         
+    
+        }
+    
+        .logo img{
+            width: 100px;
+            height: auto;
+        }
+        .cart{
+            position: absolute;
+            margin-top: -27px !important;
+            margin-right: -550px !important;
+    
+        }
+        .cart i{
+            font-size: 15px !important;
+        }
+        .cart span{
+           font-size: 7px !important; 
+           height: 9px !important; 
+           background-color: blueviolet;
+        }
+    
+        .search {
+            left: 50px;
+            top: -15px;
+            width: 300px !important;
+            height: 15px !important;
+            position: relative;
+            transform: translateX(100px);
+            background: #fff;
+            border-radius: 60px;
+            transition: 0.5s;
+            box-shadow: 0 0 0 1px #493e3c;
+            overflow: hidden;
+        }
+            
         .search .icon {
             position: absolute;
             top: 5px;
@@ -242,18 +265,17 @@ footer .footer-right {
             z-index: 1000;
             cursor: pointer;
         }
-    
-        
+            
         .search .icon::before {
-        content: '';
-        position: absolute !important;
-        width: 5px;
-        height: 5px;
-        border: 1px solid #493e3c;
-        border-radius: 50%;
-        transform: translate(-2px, -2px);
+            content: '';
+            position: absolute !important;
+            width: 5px;
+            height: 5px;
+            border: 1px solid #493e3c;
+            border-radius: 50%;
+            transform: translate(-2px, -2px);
         }
-        
+            
         .search .icon::after {
             content: '';
             position: absolute !important;
@@ -263,76 +285,75 @@ footer .footer-right {
             border-radius: 50%;
             transform: translate(2px, 1px) rotate(315deg);
         }
-    
-        
+            
         .search .input {
-        position: relative;
-        width: 100px;
-        height: 15px;
-        display: flex;
-        justify-content: center;
-        align-items : center;
+            position: relative;
+            width: 100px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items : center;
         }
-        
+            
         .search .input input{
-        position: absolute;
-        top: 0px;
-        left: 20px;
-        width: 100%;
-        height: 100%;
-        border : none;
-        outline: navajowhite;
-        font-size: 10px;
-        
-        
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border : none;
+            outline: navajowhite;
+            font-size: 10px;
         }
-   
-    footer .container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: auto !important;
-    }
-    footer .footer-left,
-    footer .footer-center,
-    footer .footer-right { 
-        margin: 10px 5px; 
-        flex: 1 1 100px; 
-        max-width: 130px; 
-    }
-    .footer-left img {
-        width: 50px !important;
-        height: auto;
-    }
-    .footer-left span {
-        font-size: 10px !important;
-    }
-    .footer-left i {
-        font-size: 10px !important;
-    }
 
-    .footer-center h3 {
-        font-size: 12px !important;
+      
+       
+        footer .container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto !important;
+        }
+        footer .footer-left,
+        footer .footer-center,
+        footer .footer-right { 
+            margin: 10px 5px; 
+            flex: 1 1 100px; 
+            max-width: 130px; 
+        }
+        .footer-left img {
+            width: 50px !important;
+            height: auto;
+        }
+        .footer-left span {
+            font-size: 10px !important;
+        }
+        .footer-left i {
+            font-size: 10px !important;
+        }
+    
+        .footer-center h3 {
+            font-size: 12px !important;
+        }
+        .footer-center b {
+            font-size: 10px !important;
+        }
+        .footer-center i {
+            font-size: 10px !important;
+        }
+        .footer-center span {
+            font-size: 10px !important;
+            display: block; 
+            margin: 5px 0;
+        }
+    
+        .footer-right h3 {
+            font-size: 12px !important;
+        }
+        .footer-right .fanpage_img img {
+            width: 100px !important;
+            height: auto;
+            margin-top: 10px; 
+        }
     }
-    .footer-center b {
-        font-size: 10px !important;
-    }
-    .footer-center i {
-        font-size: 10px !important;
-    }
-    .footer-center span {
-        font-size: 10px !important;
-        display: block; 
-        margin: 5px 0;
-    }
-
-    .footer-right h3 {
-        font-size: 12px !important;
-    }
-    .footer-right .fanpage_img img {
-        width: 100px !important;
-        height: auto;
-        margin-top: 10px; 
-    }
-  
-}
+    

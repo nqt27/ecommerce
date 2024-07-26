@@ -1,3 +1,11 @@
+#background-breadcrumb{
+    background-color: #EEEEEE;
+    height: 40px;
+    width: 100% !important;
+}
+.breadcrumb{
+    margin-top: 10px !important; 
+}
 .content{
     display: flex;
     

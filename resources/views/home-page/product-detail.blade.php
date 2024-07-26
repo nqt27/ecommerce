@@ -17,6 +17,15 @@
 <body>
     @include('home-page.layout_header')
     <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" id="background-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" style="text-decoration: none; color : #222222;">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                        style="text-decoration: none; color : #222222;">Category</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product</li>
+            </ol>
+        </nav>
         <div class="content-top">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
@@ -55,15 +64,7 @@
             </div>
 
             <div class="col-lg-5 col-md-12 col-12" id="product-info">
-                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#" style="text-decoration: none; color : #222222;">Home</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page"><a href="#"
-                                style="text-decoration: none; color : #222222;">Category</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Product</li>
-                    </ol>
-                </nav>
+
                 <h3 class="py-4">{{$product->name}}</h3>
                 <h2>{{$product->price}}</h2>
                 <select name="size" class="my-3">
@@ -104,7 +105,7 @@
             </div>
         </div>
     </div>
-  
+
     @include('home-page.layout_footer')
 
 </body>

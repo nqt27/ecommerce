@@ -18,6 +18,14 @@
     @include('home-page.layout_header')
 
     <div class="container">
+
+
+        <nav aria-label="breadcrumb" id="background-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{asset('/')}}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product</li>
+            </ol>
+        </nav>
         <div class="content">
 
             <div class="content-left">
