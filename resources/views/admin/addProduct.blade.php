@@ -7,8 +7,7 @@
     <title>ADMIN PAGE</title>
 
     <!-- Fonts and Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="~/img/favicon.ico" rel="icon">
@@ -41,8 +40,7 @@
     @include('admin.layout')
     <!-- Content Wrapper -->
 
-    <form method="post" action="{{ route('products.store') }}" class="form-wrapper" enctype="multipart/form-data"
-        style=" width : 50% !important; ">
+    <form method="post" action="{{ route('products.store') }}" class="form-wrapper" enctype="multipart/form-data" style=" width : 50% !important; ">
         @csrf
         <!-- Thêm CSRF token vào form -->
         <div class="row pb-2 ">
@@ -58,6 +56,10 @@
         <div class="mb-3 row p-1">
             <label class="p-0">Price</label>
             <input class="form-control" name="price" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label class="p-0">Stock</label>
+            <input class="form-control" name="stock" />
         </div>
         <div class="mb-3 row p-1">
             <label class="p-0">Category ID</label>

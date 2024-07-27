@@ -30,6 +30,7 @@ class ProductController extends Controller
         $product->image = $path;
         $product->price = $request->input('price');
         $product->description = $request->input('description');
+        $product->stock = $request->input('stock');
         $product->category_id = $request->input('category_id');
         $product->save();
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
