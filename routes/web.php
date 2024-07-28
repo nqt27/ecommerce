@@ -28,7 +28,7 @@ Route::get('/home-product', function (CategoryController $categoryController, Pr
 
 
 Route::get('/home-product/{id}', [ProductController::class, 'show'])->name('products.show');
-
+Route::get('/search', [ProductController::class, 'search'])->name('search');
 
 
 Route::middleware(['auth'])->group(function () {

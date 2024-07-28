@@ -50,9 +50,11 @@
             <div class="right-header">
                 <div class="search">
                     <div class="icon"></div>
-                    <div class="input">
-                        <input type="text" placeholder="Search" id="mysearch">
-                    </div>
+                    <form action="{{route('search')}}" method="get">
+                        <input type="text" name="kw" placeholder="Nhập">
+                        <button type="submit">Tìm kiếm</button>
+                    </form>
+
                 </div>
                 <div class="cart">
                     <a class="nav-link" data-toggle="dropdown" href="{{route('cart.view')}}">

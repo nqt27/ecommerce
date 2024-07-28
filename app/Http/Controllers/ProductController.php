@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Category;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -84,5 +84,19 @@ class ProductController extends Controller
         $product->save();
 
         return redirect()->route('admin.product')->with('success', 'Product updated successfully.');
+    }
+    public function search(Request $request)
+    {
+        $query = $request->input('kw');
+        $categories = Category::all();
+        $product = Product::where('name', 'LIKE', "%{$query}%")->get();
+        if (!$product) {
+            return redirect()->back()->with('error', 'Product not found.');
+        }
+
+        return view('home-page.product-home', [
+            'categories' => $categories,
+            'products' => $product
+        ]);
     }
 }
