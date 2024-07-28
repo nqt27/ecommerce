@@ -121,7 +121,7 @@ body {
 }
 
 .right-header {
-    width: 35%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
 }
@@ -129,8 +129,8 @@ body {
 
 
 .right-header .cart {
-    margin-left: -200px !important;
-    width: 25%;
+    margin-left: 22px !important;
+    width: 0%;
     margin: 2%;
 }
 

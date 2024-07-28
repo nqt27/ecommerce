@@ -10,7 +10,8 @@
         </form>
 
         <i id="icon-user" class="bi bi-person-circle" style="color:white;transform: translateX(400px);"></i>
-        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
+        <a href="{{ route('logout') }}"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
             Logout
         </a>
         @endauth
@@ -18,7 +19,8 @@
         <!-- Kiểm tra người dùng chưa đăng nhập -->
         @guest
         <p class="auth">
-            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}" class="signup">Signup</a>
+            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}"
+                class="signup">Signup</a>
         </p>
         @endguest
     </div>
@@ -49,15 +51,16 @@
             </div>
             <div class="right-header">
                 <div class="search1">
-                    <div class="icon"></div>
-                    <form action="{{route('search')}}" method="get">
-                        <input type="text" name="kw" placeholder="Nhập">
-                        <button type="submit">Tìm kiếm</button>
-                    </form>
+                    <div class="input">
+                        <form id="searchForm" action="{{route('search')}}" method="get">
 
+                            <input type="text" name="kw" placeholder="Search" id="mysearch">
+                            <button class="icon" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
                 </div>
                 <div class="cart">
-                    <a class="nav-link" data-toggle="dropdown" href="{{route('cart.view')}}">
+                    <a data-toggle="dropdown" href="{{route('cart.view')}}">
                         <i class="bi bi-bag-fill" style="font-size: 30px;"></i>
                         <span class="badge badge-danger navbar-badge centered-badge" style="
                             font-size: 15px; 
@@ -69,7 +72,9 @@
                             margin-left: -7px; 
                             margin-top: 5px; 
                             border-radius: 50%; 
-                            background-color: blue;">
+                            background-color: black;
+                            margin-top: -43px;
+                            margin-left: 26px;">
                             4
                         </span>
 

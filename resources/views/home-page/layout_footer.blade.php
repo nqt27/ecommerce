@@ -72,10 +72,10 @@
 </footer>
 
 <script>
-    const icon  = document.querySelector('.icon');
-    const search  = document.querySelector('.search');
-
-    icon.onclick = function(){
-        search.classList.toggle('active')
+     function submitOnEnter(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById("searchForm").submit();
+      }
     }
 </script>
