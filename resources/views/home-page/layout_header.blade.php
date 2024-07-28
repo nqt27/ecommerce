@@ -10,8 +10,7 @@
         </form>
 
         <i id="icon-user" class="bi bi-person-circle" style="color:white;transform: translateX(400px);"></i>
-        <a href="{{ route('logout') }}"
-            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
+        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="logout">
             Logout
         </a>
         @endauth
@@ -19,8 +18,7 @@
         <!-- Kiểm tra người dùng chưa đăng nhập -->
         @guest
         <p class="auth">
-            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}"
-                class="signup">Signup</a>
+            <a href="{{ route('login') }}" class="login">Login</a> | <a href="{{ route('register') }}" class="signup">Signup</a>
         </p>
         @endguest
     </div>
@@ -47,7 +45,7 @@
                     </div>
                 </div>
                 <div class="cart">
-                    <a class="nav-link" data-toggle="dropdown" href="{{route('cart.index')}}">
+                    <a class="nav-link" data-toggle="dropdown" href="{{route('cart.view')}}">
                         <i class="bi bi-bag-fill" style="font-size: 30px;"></i>
                         <span class="badge badge-danger navbar-badge" style="font-size:10px; 
                                 height: 15px; 

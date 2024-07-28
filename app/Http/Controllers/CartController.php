@@ -1,64 +1,52 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Cart;
+use App\Models\CartItem;
+use Illuminate\Support\Facades\Auth;
+
 
 class CartController extends Controller
 {
-    public function index()
+    public function addToCart(Request $request)
     {
-        $cart = session()->get('cart', []);
+        $product = Product::findOrFail($request->product_id);
+
+        $cart = Cart::firstOrCreate([
+            'user_id' => Auth::id()
+        ]);
+
+        $cartItem = $cart->items()->updateOrCreate(
+            ['product_id' => $product->id],
+            ['quantity' => $request->quantity]
+        );
+
+        return response()->json(['message' => 'Product added to cart']);
+    }
+
+    public function viewCart()
+    {
+        $cart = Cart::where('user_id', Auth::id())->with('items.products')->first();
+        
         return view('cart', compact('cart'));
     }
 
-    // // public function addToCart(Request $request, $id)
-    // // {
-    // //     $product = Product::find($id);
+    public function removeFromCart(Request $request)
+    {
+        $cartItem = CartItem::findOrFail($request->cart_item_id);
+        $cartItem->delete();
 
-    // //     if (!$product) {
-    // //         abort(404);
-    // //     }
+        return response()->json(['message' => 'Product removed from cart']);
+    }
 
-    // //     $cart = session()->get('cart', []);
+    public function updateCart(Request $request)
+    {
+        $cartItem = CartItem::findOrFail($request->cart_item_id);
+        $cartItem->update(['quantity' => $request->quantity]);
 
-    // //     // Nếu sản phẩm đã tồn tại trong giỏ hàng thì tăng số lượng
-    // //     if (isset($cart[$id])) {
-    // //         $cart[$id]['quantity']++;
-    // //     } else {
-    // //         // Nếu sản phẩm chưa tồn tại trong giỏ hàng thì thêm mới
-    // //         $cart[$id] = [
-    // //             "name" => $product->name,
-    // //             "quantity" => 1,
-    // //             "price" => $product->price,
-    // //             "image" => $product->image
-    // //         ];
-    // //     }
-
-    // //     session()->put('cart', $cart);
-
-    // //     return redirect()->back()->with('success', 'Product added to cart successfully!');
-    // // }
-
-    // // public function updateCart(Request $request)
-    // // {
-    // //     if ($request->id && $request->quantity) {
-    // //         $cart = session()->get('cart');
-    // //         $cart[$request->id]["quantity"] = $request->quantity;
-    // //         session()->put('cart', $cart);
-    // //         session()->flash('success', 'Cart updated successfully');
-    // //     }
-    // // }
-
-    // // public function removeFromCart(Request $request)
-    // // {
-    // //     if ($request->id) {
-    // //         $cart = session()->get('cart');
-    // //         if (isset($cart[$request->id])) {
-    // //             unset($cart[$request->id]);
-    // //             session()->put('cart', $cart);
-    // //         }
-    // //         session()->flash('success', 'Product removed successfully');
-    // //     }
-    // }
+        return response()->json(['message' => 'Cart updated']);
+    }
 }
