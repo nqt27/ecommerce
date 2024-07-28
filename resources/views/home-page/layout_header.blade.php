@@ -27,14 +27,24 @@
             <div class="navbar">
                 <ul>
                     <li><a href="#home">ABOUT US</a></li>
-                    <li><a href="{{asset('/home-product')}}">PRODUCT</a></li>
+                    <li><a href="{{asset('/home-product')}}">PRODUCT</a>
+                        <ul>
+                            <li>
+                                <a class="transition" title="Faric Backpacks" href="faric-backpack">Faric Backpacks</a>
+                            </li>
+                            <li>
+                                <a class="transition" title="Leather Backpacks" href="leather-backpack">Leather
+                                    Backpacks</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="#about">BLOG</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
             <div class="logo">
                 <a href="{{asset('/')}}">
-                    <img src="https://demerite.com.vn/thumbs/222x42x2/upload/photo/logo-footer-2891.png" alt="">
+                    <img src="https://demerite.com.vn/thumbs/371x70x2/upload/photo/logo-de-meritepdf-9834.png" alt="">
                 </a>
             </div>
             <div class="right-header">
@@ -47,11 +57,20 @@
                 <div class="cart">
                     <a class="nav-link" data-toggle="dropdown" href="{{route('cart.view')}}">
                         <i class="bi bi-bag-fill" style="font-size: 30px;"></i>
-                        <span class="badge badge-danger navbar-badge" style="font-size:10px; 
-                                height: 15px; 
-                                margin-left: -5px; 
-                                margin-top:3px;">
+                        <span class="badge badge-danger navbar-badge centered-badge" style="
+                            font-size: 15px; 
+                            height: 15px; 
+                            width: 15px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            margin-left: -7px; 
+                            margin-top: 5px; 
+                            border-radius: 50%; 
+                            background-color: blue;">
+                            4
                         </span>
+
                     </a>
                 </div>
             </div>
