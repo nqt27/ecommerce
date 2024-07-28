@@ -48,7 +48,7 @@
                 </a>
             </div>
             <div class="right-header">
-                <div class="search">
+                <div class="search1">
                     <div class="icon"></div>
                     <form action="{{route('search')}}" method="get">
                         <input type="text" name="kw" placeholder="Nhập">
