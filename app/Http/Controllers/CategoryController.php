@@ -17,13 +17,14 @@ class CategoryController extends Controller
         // Validate dữ liệu
         $request->validate([
             'name' => 'required|string|max:255',
-            'image' => 'nullable|string'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+        $path = 'storage/' . $request->file('image')->store('image', 'public');
         // Tạo sản phẩm mới
         $category = new Category;
         $category->name = $request->input('name');
-        $category->image = $request->input('image');
-        
+        $category->image = $path;
+
         $category->save();
         // Redirect về trang chủ hoặc trang danh sách sản phẩm
         return redirect()->route('admin')->with('success', 'Product added successfully.');

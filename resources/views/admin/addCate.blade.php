@@ -7,8 +7,7 @@
     <title>ADMIN PAGE</title>
 
     <!-- Fonts and Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="~/img/favicon.ico" rel="icon">
@@ -40,7 +39,7 @@
 <body class="hold-transition sidebar-mini layout-footer-fixed">
     @include('admin.layout')
 
-    <form method="post" action="{{ route('categories.store') }}">
+    <form method="post" action="{{ route('categories.store') }}" enctype="multipart/form-data">
         @csrf
         <!-- CSRF token -->
         <div class="border p-3 m-4">
@@ -52,20 +51,17 @@
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <div class="row mt-3">
-                <label for="image">Image</label>
-                <input name="image" type="file" class="form-control" id="image" />
-                @error('image')
-                <span class="text-danger">{{ $message }}</span>
-                @enderror
+            <div class="mb-3 row p-1">
+                <label class="p-0">Image</label>
+                <input type="file" class="form-control" name="image">
             </div>
-            
-            <div class="row mt-3" id = "box-group">
+
+            <div class="row mt-3" id="box-group">
                 <div class="col-6">
-                    <button type="submit" class="btn btn-primary" >Create</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
                 </div>
                 <div class="col-6">
-                    <a href="{{ route('admin.cate') }}" class="btn btn-secondary" >
+                    <a href="{{ route('admin.cate') }}" class="btn btn-secondary">
                         <i class="bi bi-arrow-return-left"></i> Back to List
                     </a>
                 </div>
