@@ -62,6 +62,8 @@ Route::middleware(['auth'])->group(function () {
         return app(AdminController::class)->addCategory($categories);
     })->name('admin.addCate');
     Route::post('/admin/addCate', [CategoryController::class, 'store'])->name('categories.store');
+    Route::delete('/admin/category/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+    Route::put('/admin/category/{id}', [CategoryController::class, 'update'])->name('categories.update');
 
     Route::get('/admin/addProduct', function (ProductController $productController) {
         $products = $productController->index();

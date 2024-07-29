@@ -7,8 +7,7 @@
     <title>ADMIN PAGE</title>
 
     <!-- Fonts and Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="~/img/favicon.ico" rel="icon">
@@ -64,30 +63,48 @@
         <tbody>
             @foreach($categories as $c)
             <tr>
-                <td>{{$c->id}}</td>
-                <td>{{$c->name}}</td>
-                <td>{!! $c->image !!}</td>
+                <td scope="row">{{$c->id}}</td>
+                <td class="view-mode">{{$c->name}}</td>
+                <td class="view-mode"><img src="{{ asset($c->image) }}" alt=""></td>
 
 
-                <td>
+                <td class="view-mode">
                     <a href="#" class="btn btn-warning btn-sm mt-3">
                         <i class="bi bi-pencil-square"></i> Edit
                     </a>
 
-                    <a href="#" class="btn btn-danger btn-sm mt-3">
-                        <i class="bi bi-trash"></i> Delete
-                    </a>
+                    <form action="{{ route('categories.destroy', $c->id) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger btn-sm mt-3" type="submit"><i class="bi bi-trash"></i>
+                            Delete</button>
+                    </form>
                 </td>
+            </tr>
+            <tr class="edit-row" style="display:none;">
+                <form action="{{ route('categories.update', $c->id) }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <td scope="row">{{$c->id}}</td>
+                    <td><input name="name" type="text" class="form-control" value="{{$c->name}}"></td>
+                    <td><input name="image" type="file" class="form-control" value="{{$c->image}}"></td>
+                    <td>
+                        <button class="btn btn-success btn-sm mt-3 save-btn" type="submit"><i class="bi bi-save"></i> Save</button>
+                        <a class="btn btn-secondary btn-sm mt-3 cancel-btn"><i class="bi bi-x"></i> Cancel</a>
+                    </td>
+
+                </form>
+
             </tr>
 
             @endforeach
-            
+
         </tbody>
     </table>
 
 
     @include('admin.layout-footer')
-
+    <script src="{{asset('js/inlineEdit.js')}}"></script>
 
 </body>
 
