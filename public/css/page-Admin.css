@@ -33,11 +33,25 @@
     width: 250px !important;
 }
  #nav-menu {
-        display: none;
-    }
+        display: none !important;
+}
+.menu-reponsive{
+    display: none;
+}
+
+
 
 @media (max-width : 430px){
+    .hidden{
+        display : none !important;
+    }
 
+
+
+    #avt-admin{
+        display: none;
+    }
+    
    
     #nav-menu {
         display: none; 

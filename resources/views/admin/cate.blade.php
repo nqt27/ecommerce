@@ -41,49 +41,51 @@
     <!-- Main Sidebar Container -->
     @include('admin.layout')
 
+    <div class="table-content">
+        <table class="table">
+            <div class="p-3" id="head-content">
+                <h4>CATEGORIES</h4>
+                <a href="{{route('admin.addCate')}}" class="btn btn-primary">
+                    <i class="bi bi-plus-circle-fill"></i> Add Category
+                </a>
+            </div>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Manage</th>
 
+                </tr>
+            </thead>
+
+            <tbody>
+            <tbody>
+                @foreach($categories as $c)
+                <tr>
+                    <td>{{$c->id}}</td>
+                    <td>{{$c->name}}</td>
+                    <td>{!! $c->image !!}</td>
+
+
+                    <td>
+                        <a href="#" class="btn btn-warning btn-sm mt-3">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+
+                        <a href="#" class="btn btn-danger btn-sm mt-3">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+
+                @endforeach
+
+            </tbody>
+        </table>
+    </div>
     <!-- Content Wrapper -->
-    <table class="table">
-        <div class="p-3" id="head-content">
-            <h4>CATEGORIES</h4>
-            <a href="{{route('admin.addCate')}}" class="btn btn-primary">
-                <i class="bi bi-plus-circle-fill"></i> Add Category
-            </a>
-        </div>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Image</th>
-                <th>Manage</th>
 
-            </tr>
-        </thead>
-
-        <tbody>
-        <tbody>
-            @foreach($categories as $c)
-            <tr>
-                <td>{{$c->id}}</td>
-                <td>{{$c->name}}</td>
-                <td>{!! $c->image !!}</td>
-
-
-                <td>
-                    <a href="#" class="btn btn-warning btn-sm mt-3">
-                        <i class="bi bi-pencil-square"></i> Edit
-                    </a>
-
-                    <a href="#" class="btn btn-danger btn-sm mt-3">
-                        <i class="bi bi-trash"></i> Delete
-                    </a>
-                </td>
-            </tr>
-
-            @endforeach
-            
-        </tbody>
-    </table>
 
 
     @include('admin.layout-footer')

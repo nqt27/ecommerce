@@ -21,17 +21,6 @@
  <script src="~/lib/tempusdominus/js/moment.min.js"></script>
  <script src="~/lib/tempusdominus/js/moment-timezone.min.js"></script>
  <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
- <script>
-    const showMenu = (toggleId, navId) => {
-        const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId);
-
-        if (toggle && nav) {
-            toggle.addEventListener('click', () => {
-                nav.classList.toggle('show');
-            });
-        }
-    }
-    showMenu('header-toggle', 'nav-menu');
-</script>
+<script src="{{asset('js/inlineEdit.js')}}"></script>
+ 
 

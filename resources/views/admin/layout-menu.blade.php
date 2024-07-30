@@ -1,6 +1,6 @@
-<nav class="navbar bg-light navbar-light">
+<nav class=" navbar bg-light navbar-light" id="menu-admin">
 
-    <div class="d-flex align-items-center ms-4 mb-4">
+    <div class="ad-flex align-items-center ms-4 mb-4" id="avt-admin">
         <div class="position-relative">
             <img class="rounded-circle"
                 src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeHVNdmcFCrz9QE8hHY1CELTso2H55p0AlGyjYfnmnQCUTxXwqfQ2nEzHEdYm5EACymgn4wiXF-uAAnsra76pg9d&_nc_ohc=rWGVPdTzi14Q7kNvgEzj1bi&_nc_ht=scontent.fsgn5-2.fna&oh=00_AYAlmouZwOBBzkemruSPfGF0Iwzg-MwVikhDDdXyLyu8jg&oe=66C5FFF8"
@@ -9,17 +9,16 @@
             </div>
         </div>
         <div class="ms-4">
-            <!-- <b class="mb-0">Thành Đạt</b> -->
             <span>Admin</span>
         </div>
     </div>
-    <div class="navbar-nav w-100">
+    <div class="menu-items" style="">
         <a href="{{route('admin')}}" class="nav-item nav-link active"><i
                 class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                     class="fa fa-laptop me-2"></i>Elements</a>
-            <div class="dropdown-menu bg-transparent border-0">
+            <div class="dropdown-menu bg-transparent border-0" style="background-color: white !important;">
                 <a href="{{route('admin.cate')}}" class="dropdown-item">
                     <i class="bi bi-card-list"></i> Categories
                 </a>

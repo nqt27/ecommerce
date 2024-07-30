@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('cart-items', function (Blueprint $table) {
             $table->id();
-            $table->text('total_amount');
-            $table->string('status');
-            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('cart_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('product_id')->nullable()->constrained()->onDelete('set null');
+            $table->decimal('quantity');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('cart-items');
     }
 };

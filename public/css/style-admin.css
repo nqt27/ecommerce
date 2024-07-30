@@ -85,6 +85,9 @@
     background: #FFFFFF;
     transition: 0.5s;
 }
+.menu-items a{
+    color : #1f2d3d !important;
+}
 
 @media (min-width: 992px) {
     .sidebar {
