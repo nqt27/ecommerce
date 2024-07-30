@@ -25,14 +25,11 @@ footer {
 <div class="content">
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-        <a href="#" class="navbar-brand d-flex d-lg-none me-4">
+        <a href="#" id="click" class="navbar-brand d-flex d-lg-none me-4">
+
             <h2 class="text-primary mb-0"><i class="bi bi-list" id="header-toggle" style="color: black;"></i></h2>
+
         </a>
-        @include('admin.layout-menu')
-
-
-
-
 
         <div class="navbar-nav align-items-center ms-auto">
             <div class="nav-item dropdown">
@@ -111,7 +108,9 @@ footer {
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item logout">
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                        class="dropdown-item logout">
                         Logout
                     </a>
                 </div>
@@ -119,3 +118,6 @@ footer {
             </div>
         </div>
     </nav>
+    <div class="menu-reponsive">
+        @include('admin.layout-menu')
+    </div>
