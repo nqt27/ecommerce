@@ -85,7 +85,6 @@
     </div>
     <!-- Content Wrapper -->
 
-<<<<<<< HEAD
             </tr>
         </thead>
 
@@ -131,8 +130,6 @@
 
         </tbody>
     </table>
-=======
->>>>>>> dat
 
 
     @include('admin.layout-footer')
